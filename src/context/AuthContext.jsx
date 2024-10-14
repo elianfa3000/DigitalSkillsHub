@@ -4,7 +4,7 @@ const AuthContext = createContext();
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error("*error del contexto 1");
+    throw new Error("*error del contexto");
   }
   return context;
 };
@@ -23,7 +23,7 @@ export const Context = ({ children }) => {
 
   return (
     <AuthContext.Provider value={{ saluda, user, setUser }}>
-      {children /* M*/}
+      {children /* m*/}
     </AuthContext.Provider>
   );
 };

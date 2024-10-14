@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/homepage/Homepage.jsx";
 import { Context } from "./context/AuthContext.jsx";
+import SingUp from "./pages/singup/SingUp.jsx";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/homepage" element={<Homepage />} />
-          <Route path="/" element={<Homepage />} />
+          <Route path="/singup" element={<SingUp />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/" element={<Homepage />} />
         </Routes>
