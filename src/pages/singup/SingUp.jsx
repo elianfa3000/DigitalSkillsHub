@@ -26,7 +26,7 @@ const SingUp = () => {
               id="name"
               placeholder="Ingrese su nombre"
               type="text"
-              {...register("names", { required: true })}
+              {...register("userName", { required: true })}
             />
             <div className="Svg1">
               <Svg1
