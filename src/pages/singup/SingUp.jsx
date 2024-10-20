@@ -3,13 +3,22 @@ import Navbar from "../../components/navbar/Navbar";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../../context/AuthContext";
 import Svg1 from "../../../public/Svg1";
+import { registerRequest } from "../../api/auth";
+import cookie from "js-cookie";
 
 const SingUp = () => {
   const { user } = useAuth();
   console.log(user);
   const { register, handleSubmit } = useForm();
-  const onSubmit = handleSubmit((value) => {
+  const onSubmit = handleSubmit(async (value) => {
+    const cookies = cookie.get();
     console.log(value);
+    console.log(cookies.token);
+    try {
+      await registerRequest(value);
+    } catch (error) {
+      console.log(error);
+    }
   });
 
   return (
@@ -26,7 +35,7 @@ const SingUp = () => {
               id="name"
               placeholder="Ingrese su nombre"
               type="text"
-              {...register("userName", { required: true })}
+              {...register("username", { required: true })}
             />
             <div className="Svg1">
               <Svg1

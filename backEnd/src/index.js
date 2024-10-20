@@ -1,5 +1,5 @@
 import app from "./app.js";
+import DB from "./db.js";
 
-app.listen(3000, () => {
-  console.log("holaaaaaaaaaaaaaaaa");
-});
+DB();
+app.listen(3000);
