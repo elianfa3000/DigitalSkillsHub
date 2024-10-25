@@ -1,8 +1,10 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Homepage from "./pages/homepage/Homepage.jsx";
 import { Context } from "./context/AuthContext.jsx";
-import SingUp from "./pages/singup/SingUp.jsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SignUp from "./pages/signup/SignUp.jsx";
+import SignIn from "./pages/signin/SignIn.jsx";
+import Homepage from "./pages/homepage/Homepage.jsx";
+import Navigation from "./pages/navigation/Navigation.jsx";
 
 function App() {
   return (
@@ -10,8 +12,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/homepage" element={<Homepage />} />
-          <Route path="/singup" element={<SingUp />} />
-          <Route path="/" element={<Homepage />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/navigation" element={<Navigation />} />
           <Route path="/" element={<Homepage />} />
         </Routes>
       </BrowserRouter>

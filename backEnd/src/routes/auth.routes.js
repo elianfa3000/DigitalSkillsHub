@@ -1,15 +1,15 @@
 import { Router } from "express";
 import {
   register,
-  login,
-  //verifyToken,
+  signin,
+  verifyToken,
 } from "../controllers/auth.controller.js";
 import { validateSchema } from "../middlewares/validator.middleware.js";
-import { registerSchema, loginSchema } from "../schemas/auth.schema.js";
+import { registerSchema, signinSchema } from "../schemas/auth.schema.js";
 
 const router = Router();
 
 router.post("/register", validateSchema(registerSchema), register);
-router.get("/login", validateSchema(loginSchema), login);
-//router.get("/lo", verifyToken);
+router.post("/signin", validateSchema(signinSchema), signin);
+router.get("/verifyToken", verifyToken);
 export default router;

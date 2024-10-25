@@ -4,14 +4,13 @@ import jwt from "jsonwebtoken";
 
 export const register = async (req, res) => {
   const { email, password, username } = req.body;
-  const token = req.cookies;
-  console.log(token);
+
   try {
-    /*const foundUser = await User.findOne({ email: email });
+    const foundUser = await User.findOne({ email: email });
     if (foundUser) {
       return res.status(400).json(["**the email already exists"]);
     }
-*/
+
     const passwordHash = await bcrypt.hash(password, 10);
     const newUser = new User({
       username,
@@ -47,8 +46,8 @@ export const register = async (req, res) => {
   }
 };
 
-export const login = async (req, res) => {
-  const { email, password } = req.bosy;
+export const signin = async (req, res) => {
+  const { email, password } = req.body;
   try {
     const foundUser = await User.findOne({ email: email });
     if (!foundUser) {
@@ -86,23 +85,23 @@ export const login = async (req, res) => {
 
 export const verifyToken = async (req, res) => {
   const { token } = req.cookies;
-  console.log(token);
   if (!token) {
-    return res.status(401).json({ message: "no autorizado*" });
+    return res.status(401).send(["**Unauthorized"]);
   }
   jwt.verify(token, "secret123", async (err, user) => {
     if (err) {
-      return res.status(401).json({ message: "no autorizado*" });
+      console.log(err);
+      return res.staus(200).send(["**Unauthorized"]);
     }
-    console.log(user); //regresa id que guardamos
-    const userFound = await User.findById(user.id);
-    if (!userFound) {
-      return res.status(401).json({ message: "no autorizado*" });
+    const foundUser = await User.findById(user.id);
+    if (!foundUser) {
+      return res.status(401).send(["**Unauthorized"]);
     }
     return res.status(200).json({
-      id: userFound._id,
-      username: userFound.username,
-      email: userFound.email,
+      username: foundUser.username,
+      email: foundUser.email,
+      password: foundUser.password,
+      token: token,
     });
   });
 };

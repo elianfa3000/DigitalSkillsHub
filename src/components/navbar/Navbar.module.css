@@ -28,7 +28,7 @@
   padding: 0px 10px;
 }
 
-a {
+.navUl a {
   user-select: none;
   color: #ffffff;
   font-weight: bold;

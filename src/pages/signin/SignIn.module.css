@@ -11,7 +11,7 @@
   margin: 0px auto 15px auto;
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -20,13 +20,13 @@ form {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
-label {
+.label {
   display: flex;
   width: 100%;
   margin-top: 13px;
   font-weight: 500;
 }
-input {
+.input {
   margin: 4px 0;
   padding: 11px 10px;
   border: 1px solid #ccc;
@@ -37,9 +37,17 @@ input {
 
 .Svg1 {
   margin: auto 0px auto auto;
+  transition: all 0.2s ease;
 }
 
-button {
+.errors {
+  margin-top: 20px;
+  padding-left: 10px;
+  /*background-color: #007bff;*/
+  color: rgb(251, 55, 55);
+}
+
+.button {
   margin-top: 20px;
   padding: 10px;
   background-color: #007bff;
@@ -48,13 +56,17 @@ button {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: all 0.2s ease;
 }
 
-button:hover {
+.button:hover {
   background-color: #0056b3;
 }
+.button:active {
+  background-color: #014997;
+  transform: translateY(3px);
+}
 
-.input-container {
+.inputContainer {
   display: flex;
 }

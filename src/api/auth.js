@@ -5,6 +5,14 @@ const axiosInstance = axios.create({
   withCredentials: true,
 });
 
-export const registerRequest = (user) => {
-  axiosInstance.post("/register", user);
+export const registerRequest = async (user) => {
+  return axiosInstance.post("/register", user);
+};
+
+export const signinRequest = (user) => {
+  return axiosInstance.post("/signin", user);
+};
+
+export const verifyToken = () => {
+  return axiosInstance.get("/verifyToken");
 };
