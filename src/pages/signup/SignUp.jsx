@@ -2,7 +2,7 @@ import s from "./SignUp.module.css";
 import Navbar from "../../components/navbar/Navbar";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../../context/AuthContext";
-import Svg1 from "../../../public/Svg1";
+import Svg1 from "../../public/Svg1";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 

@@ -1,6 +1,6 @@
 import s from "./Homepage.module.css";
 import Navbar from "../../components/navbar/Navbar.jsx";
-import img1 from "/public/img1.jpg";
+import img1 from "../../public/img1.jpg";
 import { TfiHandPointRight } from "react-icons/tfi";
 //import FormOne from "../../components/forms/FormOne.jsx";
 
@@ -97,8 +97,9 @@ const Homepage = () => {
                 Convierte las competencias digitales en tu llave para el éxito.
               </h3>
               <p>
-                ¡Regístrate ahora convierte las competencias digitales en tu
-                llave para el éxito. Nuestra plataforma te ofrece:
+                ¡Regístrate ahora y convierte las competencias digitales en tu
+                llave para el éxito.
+                <br /> Nuestra plataforma te ofrece:
               </p>
               <ul className={s.benefitsList}>
                 <li className={s.benefit}>

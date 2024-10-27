@@ -1,0 +1,188 @@
+const WebSecurity = () => {
+  return (
+    //1.3    Uso básico de dispositivos - Seguridad en línea
+    <>
+      <div>
+        <h2>Introducción</h2>
+        <p>
+          La seguridad en línea es fundamental para proteger tu información
+          personal mientras navegas por Internet. En esta sección, aprenderás a
+          crear contraseñas seguras, reconocer enlaces y correos sospechosos,
+          proteger tu privacidad de forma general y asegurarte de que los sitios
+          web que visitas son seguros.
+        </p>
+      </div>
+      <div>
+        <h2>Contraseñas Seguras</h2>
+        <p>
+          Tener una contraseña fuerte es el primer paso para proteger tu
+          información. Una buena contraseña debe ser difícil de adivinar y única
+          para cada cuenta.
+        </p>
+        <h2>¿Qué hace que una contraseña sea segura?</h2>
+        <ul>
+          <li>
+            <strong>Longitud:</strong> Lo ideal es que una contraseña tenga al
+            menos 12 caracteres.
+          </li>
+          <li>
+            <strong>Combinación de caracteres:</strong> Utiliza una combinación
+            de letras (mayúsculas y minúsculas), números y símbolos.
+          </li>
+          <li>
+            <strong>Evita palabras comunes:</strong> No uses palabras como
+            "contraseña" o "123456". Son fáciles de adivinar.
+          </li>
+          <li>
+            <strong>Evita información personal:</strong> No incluyas tu nombre,
+            fecha de nacimiento o cualquier dato fácil de adivinar.
+          </li>
+        </ul>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/boQKl5BkPfs?si=lak71jO8h6_8GHBu?rel=0"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        <h2>Uso de Autenticación en Dos Pasos</h2>
+        <p>
+          La autenticación en dos pasos (2FA) es una capa extra de seguridad que
+          puedes activar en la mayoría de las cuentas. Este sistema requiere
+          que, además de la contraseña, ingreses un código que se envía a tu
+          teléfono o correo electrónico. Así, aunque alguien adivine tu
+          contraseña, no podrá acceder sin el código.
+        </p>
+      </div>
+      <div>
+        <h2>Protección Contra Malware</h2>
+        <p>
+          El malware es un software malicioso diseñado para dañar o robar
+          información de tu dispositivo. Aprender a identificar y evitar malware
+          es crucial para mantenerte seguro en línea.
+        </p>
+
+        <h2>
+          Cómo Reconocer Enlaces y Correos Electrónicos Sospechosos (Phishing)
+        </h2>
+        <p>
+          El phishing es una técnica utilizada para robar información personal,
+          como contraseñas o datos bancarios. Los estafadores envían correos o
+          mensajes que parecen legítimos, pero intentan engañarte para que
+          ingreses tus datos en sitios falsos.
+        </p>
+        <ul>
+          <li>
+            <strong>Desconfía de mensajes urgentes:</strong> Correos que piden
+            "actuar ahora" o que te advierten de una "emergencia" suelen ser
+            intentos de phishing.
+          </li>
+          <li>
+            <strong>Revisa la dirección del remitente:</strong> Los correos
+            fraudulentos a menudo tienen direcciones de correo extrañas o con
+            pequeños cambios, como soporte@paypa1.com en lugar de paypal.com.
+          </li>
+          <li>
+            <strong>No hagas clic en enlaces sin verificar:</strong> Si un
+            correo parece sospechoso, no hagas clic en ningún enlace ni
+            descargues archivos adjuntos.
+          </li>
+        </ul>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/M2HaMR3H0Cg?si=Jeqc9jLPVqfHnxjP?rel=0"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+      <div>
+        <h2>Privacidad en Internet</h2>
+        <p>
+          Mantener tu privacidad en Internet no solo depende de protegerte en
+          redes sociales, sino también de adoptar prácticas seguras de
+          navegación en general. Aquí te damos algunos consejos clave para
+          proteger tu privacidad:
+        </p>
+
+        <h2>Consejos para Proteger tu Privacidad</h2>
+        <ul>
+          <li>
+            <strong>No compartas información personal innecesaria:</strong>{" "}
+            Evita divulgar tu dirección, número de teléfono o datos familiares
+            en sitios web o aplicaciones.
+          </li>
+          <li>
+            <strong>Controla los permisos de las aplicaciones:</strong> Antes de
+            instalar una aplicación, revisa qué permisos solicita y asegúrate de
+            que no acceda a información innecesaria.
+          </li>
+          <li>
+            <strong>Usa la navegación en modo privado o incógnito:</strong> Esta
+            opción no guarda tu historial ni cookies. Úsala cuando necesites
+            navegar sin dejar rastro en el dispositivo.
+          </li>
+          <li>
+            <strong>
+              Desactiva la geolocalización en apps y dispositivos:
+            </strong>{" "}
+            Solo permite el acceso a tu ubicación cuando sea estrictamente
+            necesario.
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2>Reconocimiento de Sitios Seguros</h2>
+        <p>
+          No todos los sitios web son seguros para navegar, especialmente cuando
+          se trata de ingresar información personal. Aquí tienes algunos
+          consejos para reconocer sitios seguros:
+        </p>
+
+        <h2>Consejos para Reconocer Sitios Seguros</h2>
+        <ul>
+          <li>
+            <strong>Busca el icono del candado:</strong> En la barra de
+            direcciones, el ícono de candado indica que el sitio web usa una
+            conexión segura (HTTPS). Esto significa que tu información está
+            encriptada.
+          </li>
+          <li>
+            <strong>Verifica la URL del sitio:</strong> Asegúrate de que la
+            dirección sea correcta y no tenga errores (como{" "}
+            <strong style={{ color: "red" }}>faceboook.com</strong> en lugar de
+            <strong style={{ color: "red" }}> facebook.com</strong>).
+          </li>
+          <li>
+            <strong>
+              Evita sitios web con demasiadas ventanas emergentes (pop-ups):
+            </strong>
+            Estos sitios suelen ser menos seguros y, a veces, contienen malware.
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3>contenido extra:</h3>
+        <a href="https://blog.hubspot.es/website/como-saber-sitio-web-seguro">
+          Cómo saber si un sitio web es seguro: 9 claves
+        </a>
+      </div>
+      <div>
+        <h2>Conclusión</h2>
+        <p>
+          Ahora que has aprendido cómo proteger tu información en Internet,
+          estás listo para navegar de manera segura. Recuerda crear contraseñas
+          fuertes, mantener tus dispositivos protegidos contra malware y tomar
+          precauciones para proteger tu privacidad. ¡Cuida tu seguridad mientras
+          exploras todo lo que Internet tiene para ofrecer!
+        </p>
+      </div>
+    </>
+  );
+};
+
+export default WebSecurity;

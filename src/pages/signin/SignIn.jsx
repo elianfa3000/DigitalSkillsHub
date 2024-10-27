@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Navbar from "../../components/navbar/Navbar";
 import { useNavigate } from "react-router-dom";
-import Svg1 from "../../../public/Svg1.tsx";
+import Svg1 from "../../public/Svg1.tsx";
 import { useAuth } from "../../context/AuthContext.jsx";
 
 const SignIn = () => {

@@ -5,6 +5,8 @@ import SignUp from "./pages/signup/SignUp.jsx";
 import SignIn from "./pages/signin/SignIn.jsx";
 import Homepage from "./pages/homepage/Homepage.jsx";
 import Navigation from "./pages/navigation/Navigation.jsx";
+import InfoAccess from "./pages/InfoAccess/InfoAccess.jsx";
+import WebSecurity from "./pages/webSecurity/WebSecurity.jsx";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/navigation" element={<Navigation />} />
+          <Route path="/InfoAccess" element={<InfoAccess />} />
+          <Route path="/webSecurity" element={<WebSecurity />} />
           <Route path="/" element={<Homepage />} />
         </Routes>
       </BrowserRouter>
