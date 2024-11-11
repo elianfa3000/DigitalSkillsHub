@@ -180,6 +180,7 @@ const WebSecurity = () => {
           precauciones para proteger tu privacidad. ¡Cuida tu seguridad mientras
           exploras todo lo que Internet tiene para ofrecer!
         </p>
+        <a href="/useInformation">-------next-------</a>
       </div>
     </>
   );

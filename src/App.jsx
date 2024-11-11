@@ -7,6 +7,9 @@ import Homepage from "./pages/homepage/Homepage.jsx";
 import Navigation from "./pages/navigation/Navigation.jsx";
 import InfoAccess from "./pages/InfoAccess/InfoAccess.jsx";
 import WebSecurity from "./pages/webSecurity/WebSecurity.jsx";
+import UseInformation from "./pages/useInformation/UseInformation.jsx";
+import ProductivityTools from "./pages/productivityTools/ProductivityTools.jsx";
+import CriticalThinking from "./pages/criticalThinking/CriticalThinking.jsx";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
           <Route path="/navigation" element={<Navigation />} />
           <Route path="/InfoAccess" element={<InfoAccess />} />
           <Route path="/webSecurity" element={<WebSecurity />} />
+          <Route path="/useInformation" element={<UseInformation />} />
+          <Route path="/productivityTools" element={<ProductivityTools />} />
+          <Route path="/criticalThinking" element={<CriticalThinking />} />
           <Route path="/" element={<Homepage />} />
         </Routes>
       </BrowserRouter>
