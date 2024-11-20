@@ -1,6 +1,6 @@
-import { createContext, useContext, useState } from "react";
-import { registerRequest, signinRequest } from "../api/auth";
-
+import { createContext, useContext, useEffect, useState } from "react";
+import { registerRequest, signinRequest, verifyToken } from "../api/auth";
+import cookies from "js-cookie";
 const AuthContext = createContext();
 export const useAuth = () => {
   const context = useContext(AuthContext);
@@ -15,6 +15,8 @@ export const Context = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
   const [authErrors, setErrors] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [level, setLevel] = useState(1); /*//////// */
   //
   const signup = async (user) => {
     try {
@@ -22,7 +24,7 @@ export const Context = ({ children }) => {
       setUser(res);
       setIsAuthenticated(true);
     } catch (err) {
-      //setErrors(err.response.data);
+      setErrors(err.response.data);
       console.log(err);
     }
   };
@@ -38,9 +40,49 @@ export const Context = ({ children }) => {
     }
   };
 
+  useEffect(() => {
+    async function checkLogin() {
+      const cookie = cookies.get();
+      try {
+        if (!cookie.token) {
+          setIsAuthenticated(false);
+          setUser(null);
+          setLoading(false);
+          return;
+        }
+
+        const res = await verifyToken();
+        if (!res.data) {
+          setIsAuthenticated(false);
+          setUser(null);
+          setLoading(false);
+          return;
+        }
+        setIsAuthenticated(true);
+        setUser(res.data);
+        setLoading(false);
+        return;
+      } catch (error) {
+        setIsAuthenticated(false);
+        setUser(null);
+        setLoading(false);
+      }
+    }
+    checkLogin();
+  }, []);
+
   return (
     <AuthContext.Provider
-      value={{ signup, signin, user, isAuthenticated, authErrors }}
+      value={{
+        signup,
+        signin,
+        loading,
+        user,
+        isAuthenticated,
+        authErrors,
+        level,
+        setLevel,
+      }}
     >
       {children /* m*/}
     </AuthContext.Provider>

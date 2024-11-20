@@ -10,6 +10,10 @@ import WebSecurity from "./pages/webSecurity/WebSecurity.jsx";
 import UseInformation from "./pages/useInformation/UseInformation.jsx";
 import ProductivityTools from "./pages/productivityTools/ProductivityTools.jsx";
 import CriticalThinking from "./pages/criticalThinking/CriticalThinking.jsx";
+import Dashboard from "./pages/dashboard/Dashboard.jsx";
+import ClassesPage from "./pages/classesPage/ClassesPage.jsx";
+import ProtectedRoute from "./routes/ProtectedRoute.jsx";
+import ProtectedOne from "./routes/ProtectedOne.jsx";
 
 function App() {
   return (
@@ -19,13 +23,22 @@ function App() {
           <Route path="/homepage" element={<Homepage />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
-          <Route path="/navigation" element={<Navigation />} />
-          <Route path="/InfoAccess" element={<InfoAccess />} />
-          <Route path="/webSecurity" element={<WebSecurity />} />
-          <Route path="/useInformation" element={<UseInformation />} />
-          <Route path="/productivityTools" element={<ProductivityTools />} />
-          <Route path="/criticalThinking" element={<CriticalThinking />} />
-          <Route path="/" element={<Homepage />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/classes" element={<ClassesPage />} />
+
+            <Route element={<ProtectedOne />}>
+              <Route path="/navigation" element={<Navigation />} />
+              <Route path="/InfoAccess" element={<InfoAccess />} />
+              <Route path="/webSecurity" element={<WebSecurity />} />
+              <Route path="/useInformation" element={<UseInformation />} />
+              <Route
+                path="/productivityTools"
+                element={<ProductivityTools />}
+              />
+              <Route path="/criticalThinking" element={<CriticalThinking />} />
+            </Route>
+          </Route>
         </Routes>
       </BrowserRouter>
     </Context>

@@ -5,47 +5,54 @@
   background-color: #14919b;
   height: 50px;
   width: calc(100% - 20px);
+
   position: fixed;
+  z-index: 10;
 }
 
 .navUl {
   display: flex;
-  width: 100%;
+  width: 80%;
 
-  margin: 7px 20px;
+  margin: 5px 5px;
 }
 
-.navUl li {
+.navLink {
+  width: clamp(100px, 120px, 200px);
+  height: 35px;
+  margin: auto 5px auto 5px;
   cursor: pointer;
   display: flex;
   border-radius: 6px;
-
+  list-style: none;
   background: radial-gradient(#213a57c0 30%, #0b6477 30%);
   background-size: 3px 3px;
-
+  text-decoration: none;
   box-shadow: 1px 1px 2px #15bdb5af;
-  margin: 0px 10px;
-  padding: 0px 10px;
 }
 
-.navUl a {
+.navLink li {
+  width: auto;
+  height: auto;
+  text-align: center;
   user-select: none;
   color: #ffffff;
   font-weight: bold;
-  margin: auto 0px;
-  text-decoration: none;
+  margin: auto;
 }
 
 .nav2 {
   cursor: pointer;
   display: flex;
-  width: 200px;
+  float: right;
+  width: 20%;
   border-radius: 6px;
   background: radial-gradient(#0165d079 30%, #007bff 30%);
   border: 1px solid #0b637737;
   box-shadow: 1px 1px 2px #15bdb5af;
   background-size: 3px 3px;
   margin: 7px 20px 7px 0px;
+  text-decoration: none;
 }
 
 .nav2:active {
@@ -54,7 +61,7 @@
 
 .register {
   user-select: none;
-  text-decoration: none;
+
   color: #ffffff;
   margin: auto;
 }

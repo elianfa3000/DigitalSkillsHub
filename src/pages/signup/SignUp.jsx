@@ -20,7 +20,7 @@ const SingUp = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/homepage");
+      navigate("/dashboard");
     }
   }, [isAuthenticated]);
 

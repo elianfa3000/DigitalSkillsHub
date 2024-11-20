@@ -11,7 +11,7 @@ const Homepage = () => {
     <>
       <Navbar />
 
-      <section className={s.welcome} /*Diálogo de bienvenida (1)*/>
+      <div className={s.welcome} /*Diálogo de bienvenida (1)*/>
         <div className={s.containerOne}>
           <h1 className={s.oneTitle}>
             Domina las competencias digitales para un mejor futuro
@@ -127,11 +127,11 @@ const Homepage = () => {
               </ul>
             </div>
           </div>
-          <a href="navigation" className={s.button}>
+          <a href="signup" className={s.button}>
             ¡Comienza a aprender ahora!
           </a>
         </div>
-      </section>
+      </div>
     </>
   );
 };

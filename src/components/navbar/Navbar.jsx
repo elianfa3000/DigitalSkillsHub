@@ -6,19 +6,17 @@ const Navbar = () => {
   return (
     <div className={s.nav}>
       <ul className={s.navUl}>
-        <li>
-          <NavLink to="/homepage">INICIO</NavLink>
-        </li>
-        <li>
-          <NavLink to="/signup">REGISTRO</NavLink>
-        </li>
-        <li>
-          <NavLink to="signin">INICIAR SESIÓN</NavLink>
-        </li>
+        <NavLink className={s.navLink} to="/dashboard">
+          <li>INICIO</li>
+        </NavLink>
+
+        <NavLink className={s.navLink} to="/dashboard">
+          <li>RECURSOS</li>
+        </NavLink>
       </ul>
-      <div className={s.nav2}>
-        <a className={s.register}>....</a>
-      </div>
+      <NavLink className={s.nav2} to="/homepage">
+        <div className={s.register}>SALIR</div>
+      </NavLink>
     </div>
   );
 };
