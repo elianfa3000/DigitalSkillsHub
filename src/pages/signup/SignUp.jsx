@@ -4,12 +4,12 @@ import { useForm } from "react-hook-form";
 import { useAuth } from "../../context/AuthContext";
 import Svg1 from "../../public/Svg1";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 const SingUp = () => {
   const navigate = useNavigate();
   //
-  const { signup, authErrors, isAuthenticated } = useAuth();
+  const { signup, errors, isAuthenticated } = useAuth();
   //
   const { register, handleSubmit } = useForm();
   //
@@ -91,13 +91,23 @@ const SingUp = () => {
             </div>
           </div>
           <div className={s.errors}>
-            {authErrors.map((error, i) => (
+            {errors.map((error, i) => (
               <p key={i}>{error}</p>
             ))}
           </div>
           <button className={s.button} type="submit">
-            boton
+            INGRESAR
           </button>
+          <NavLink
+            style={{
+              textDecoration: "none",
+              textAlign: "center",
+              marginTop: "20px",
+            }}
+            to="/signin"
+          >
+            Ingresa a tu cuenta
+          </NavLink>
         </form>
       </div>
     </>

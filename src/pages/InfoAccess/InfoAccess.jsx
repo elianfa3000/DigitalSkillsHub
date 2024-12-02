@@ -1,7 +1,10 @@
-const InfoAccess = () => {
+import Navbar from "../../components/navbar/Navbar";
+
+const InfoAccess = (data) => {
   //1.2    Uso básico de dispositivos - Búsqueda de información en Google
   return (
     <>
+      <Navbar outside={data} />
       <div>
         <div>
           <h2>Introducción</h2>

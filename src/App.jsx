@@ -14,11 +14,25 @@ import Dashboard from "./pages/dashboard/Dashboard.jsx";
 import ClassesPage from "./pages/classesPage/ClassesPage.jsx";
 import ProtectedRoute from "./routes/ProtectedRoute.jsx";
 import ProtectedOne from "./routes/ProtectedOne.jsx";
-
+import ProtectedTwo from "./routes/ProtectedTwo.jsx";
+import Profile from "./pages/profile/Profile.jsx";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 function App() {
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+  };
+
   return (
     <Context>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/homepage" element={<Homepage />} />
           <Route path="/signup" element={<SignUp />} />
@@ -26,18 +40,31 @@ function App() {
           <Route element={<ProtectedRoute />}>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/classes" element={<ClassesPage />} />
+            <Route path="/profile" element={<Profile />} />
 
             <Route element={<ProtectedOne />}>
-              <Route path="/navigation" element={<Navigation />} />
-              <Route path="/InfoAccess" element={<InfoAccess />} />
-              <Route path="/webSecurity" element={<WebSecurity />} />
+              <Route
+                path="/navigation"
+                element={<Navigation outside={false} />}
+              />
+              <Route
+                path="/InfoAccess"
+                element={<InfoAccess outside={false} />}
+              />
+              <Route
+                path="/webSecurity"
+                element={<WebSecurity outside={false} />}
+              />
+            </Route>
+
+            <Route element={<ProtectedTwo />}>
               <Route path="/useInformation" element={<UseInformation />} />
               <Route
                 path="/productivityTools"
                 element={<ProductivityTools />}
               />
-              <Route path="/criticalThinking" element={<CriticalThinking />} />
             </Route>
+            <Route path="/criticalThinking" element={<CriticalThinking />} />
           </Route>
         </Routes>
       </BrowserRouter>

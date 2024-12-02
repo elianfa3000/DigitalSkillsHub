@@ -1,0 +1,73 @@
+.profileContainer {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 100px auto 0px auto;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profileInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.userDetails {
+  flex-grow: 1;
+  padding-right: 20px;
+}
+
+.detailRow {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.labelContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.labelSpan {
+  margin-right: 10px;
+  font-weight: 500;
+  color: #838383;
+}
+
+.userLevel {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.levelBox {
+  width: 50px;
+  height: 50px;
+  background-color: #28a745;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.level {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+}
+.levelSubtitle {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

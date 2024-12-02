@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import s from "./ClassesPage.module.css";
 import Navbar from "../../components/navbar/Navbar.jsx";
 import img1 from "../../public/webImage.jpg";
@@ -8,9 +9,13 @@ import { useAuth } from "../../context/AuthContext.jsx";
 const ClassesPage = () => {
   const navigation = useNavigate();
   const { level } = useAuth();
-  console.log("*************");
-  console.log(level >= 2);
-  console.log(level);
+  console.log("*************/");
+  console.log(level < 2);
+  console.log(!(1 > 2));
+  console.log(true);
+  useEffect(() => {
+    console.log("Level cambió a:", level);
+  }, [level]);
   return (
     <>
       <Navbar />
@@ -20,8 +25,8 @@ const ClassesPage = () => {
           <h2 className={s.title}>NIVEL 1</h2>
         </div>
 
-        <div className={s.a2}>
-          {level <= 1 && (
+        <div className={s.a2} onClick={() => navigation("/useInformation")}>
+          {!(level >= 2) && (
             <div
               onClick={(e) => e.stopPropagation()}
               style={{
@@ -42,7 +47,7 @@ const ClassesPage = () => {
         </div>
 
         <div className={s.a3}>
-          {level <= 2 && (
+          {!(level >= 3) && (
             <div
               onClick={(e) => e.stopPropagation()}
               style={{

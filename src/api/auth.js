@@ -16,3 +16,11 @@ export const signinRequest = (user) => {
 export const verifyToken = () => {
   return axiosInstance.get("/verifyToken");
 };
+
+export const updateLevel = (level) => {
+  return axiosInstance.put(`/level/${level._id}`, level);
+};
+
+export const logOut = () => {
+  return axiosInstance.post("/logOut");
+};

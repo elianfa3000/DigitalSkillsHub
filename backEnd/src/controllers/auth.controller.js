@@ -38,6 +38,7 @@ export const register = async (req, res) => {
           username: savedUser.username,
           email: savedUser.email,
           password: savedUser.password,
+          level: savedUser.level,
         });
       }
     );
@@ -73,6 +74,7 @@ export const signin = async (req, res) => {
           username: foundUser.username,
           email: foundUser.email,
           password: foundUser.password,
+          level: foundUser.level,
           //createdAt: foundUser.createdAt,
           //updatedAt: foundUser.updatedAt,
         });
@@ -84,25 +86,44 @@ export const signin = async (req, res) => {
   }
 };
 
-export const verifyToken = async (req, res) => {
+export const verifyTokenReques = (req, res) => {
   const { token } = req.cookies;
+
   if (!token) {
-    return res.status(401).send(["**Unauthorized"]);
+    return res.status(401).send(["**token unexist"]);
   }
   jwt.verify(token, "secret123", async (err, user) => {
     if (err) {
-      console.log(err);
-      return res.staus(200).send(["**Unauthorized"]);
+      return res.status(403).send(["**unauthorized"]);
     }
-    const foundUser = await User.findById(user.id);
-    if (!foundUser) {
-      return res.status(401).send(["**Unauthorized"]);
+    const userFound = await User.findById(user.id);
+    if (!userFound) {
+      return res.status(401).send(["**unauthorized"]);
     }
-    return res.status(200).json({
-      username: foundUser.username,
-      email: foundUser.email,
-      password: foundUser.password,
-      token: token,
+    return res.json({
+      id: userFound.id,
+      username: userFound.username,
+      email: userFound.email,
+      level: userFound.level,
     });
   });
+};
+
+export const updateLevel = async (req, res) => {
+  console.log(req);
+  const level = await User.findByIdAndUpdate(req.user.id, req.body, {
+    new: true,
+  });
+  if (!level) {
+    return res.status(404).send(["**level no found"]);
+  }
+  console.log(level);
+  console.log("***************");
+  console.log(req.user);
+  res.json(level);
+};
+
+export const logOut = async (req, res) => {
+  res.cookie("token", "" /* { expires: new Date(0) }*/);
+  return res.sendStatus(200);
 };

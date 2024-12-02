@@ -2,14 +2,14 @@ import s from "./SignIn.module.css";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Navbar from "../../components/navbar/Navbar";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import Svg1 from "../../public/Svg1.tsx";
 import { useAuth } from "../../context/AuthContext.jsx";
 
 const SignIn = () => {
   const navigate = useNavigate();
   //
-  const { signin, isAuthenticated, authErrors } = useAuth();
+  const { signin, isAuthenticated, errors } = useAuth();
   //
   const { register, handleSubmit } = useForm();
   //
@@ -17,20 +17,20 @@ const SignIn = () => {
     console.log(values);
     await signin(values);
   });
-  //
+
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/");
-      console.log("ggggggg");
+      navigate("/dashboard");
     }
   }, [isAuthenticated]);
+
   return (
     <>
       <Navbar />
 
       <div className={s.containerForm}>
         <form className={s.form} onSubmit={onSubmit}>
-          <h3 className={s.titel}>Sing in</h3>
+          <h3 className={s.titel}>INGRESAR</h3>
 
           <label className={s.label} htmlFor="email">
             CORREO
@@ -70,13 +70,23 @@ const SignIn = () => {
             </div>
           </div>
           <div className={s.errors}>
-            {authErrors.map((error, i) => (
+            {errors.map((error, i) => (
               <p key={i}>{error}</p>
             ))}
           </div>
           <button className={s.button} type="submit">
-            boton
+            INGRESAR
           </button>
+          <NavLink
+            style={{
+              textDecoration: "none",
+              textAlign: "center",
+              marginTop: "20px",
+            }}
+            to="/signup"
+          >
+            Crea tu cuenta aquí
+          </NavLink>
         </form>
       </div>
     </>

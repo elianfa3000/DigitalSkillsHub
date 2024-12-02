@@ -67,11 +67,7 @@ const Homepage = () => {
             <li className={s.concept}>
               <h3>Nivel 3</h3>
               <p>
-                aprenderás a resolver problemas complejos utilizando
-                herramientas digitales, y a proteger tu seguridad y privacidad
-                en línea. También aprenderás a crear proyectos colaborativos en
-                línea, y a adaptarte a nuevas tecnologías y tendencias del mundo
-                digital
+                aprenderás a resolver problemas complejos utilizando herra,,
               </p>
             </li>
           </ul>

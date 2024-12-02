@@ -7,7 +7,10 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   const classs = () => {
-    navigate("/classes");
+    return navigate("/classes");
+  };
+  const profile = () => {
+    return navigate("/profile");
   };
   return (
     <>
@@ -21,7 +24,7 @@ const Dashboard = () => {
           <p className={s.description}>Explora tus clases y aprende</p>
         </div>
 
-        <div className={s.a2}>
+        <div className={s.a2} onClick={profile}>
           <div className={s.svg}>
             <User />
           </div>
