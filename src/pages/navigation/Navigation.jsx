@@ -14,7 +14,7 @@ const Navigation = (data) => {
     "Si un sitio te pide instalar algo para ver un video o recibir un premio, mejor ciérralo",
     "Revisa los permisos que das a las aplicaciones y sitios web, especialmente el acceso a tu cámara o micrófono",
   ];
-
+  //1.1 navegador web
   return (
     <>
       <Navbar outside={data} />

@@ -1,5 +1,6 @@
 const CriticalThinking = () => {
   return (
+    //2.3  Pensamiento critico
     <>
       <div>
         <h1>Pensamiento crítico</h1>

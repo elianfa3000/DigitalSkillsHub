@@ -1,6 +1,7 @@
 import img from "../../public/carpetas.png";
 
 const ProductivityTools = () => {
+  //2.2 Herramientas de productividad
   return (
     <>
       <div>

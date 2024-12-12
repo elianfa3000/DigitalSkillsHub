@@ -1,23 +1,22 @@
 .profileContainer {
-  display: block;
-  width: 100%;
-  max-width: 800px;
-  margin: 100px auto 0px auto;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
 }
 
 .profileInfo {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 100px auto 0;
+
+  background-color: #f4f4f4;
+  border-radius: 8px;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .userDetails {
   flex-grow: 1;
-  padding-right: 20px;
+  padding: 20px;
 }
 
 .detailRow {

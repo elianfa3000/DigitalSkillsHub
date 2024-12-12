@@ -29,7 +29,7 @@ const Dashboard = () => {
             <User />
           </div>
           <h2 className={s.title}>Mi Perfil</h2>
-          <p className={s.description}>Personaliza tu cuenta</p>
+          <p className={s.description}>Perfil personal</p>
         </div>
       </div>
     </>

@@ -18,6 +18,7 @@ import ProtectedTwo from "./routes/ProtectedTwo.jsx";
 import Profile from "./pages/profile/Profile.jsx";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Test1 from "./pages/test1/Test1.tsx";
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -34,6 +35,8 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
+          <Route path="/test1" element={<Test1 />} />
+
           <Route path="/homepage" element={<Homepage />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
@@ -63,8 +66,8 @@ function App() {
                 path="/productivityTools"
                 element={<ProductivityTools />}
               />
+              <Route path="/criticalThinking" element={<CriticalThinking />} />
             </Route>
-            <Route path="/criticalThinking" element={<CriticalThinking />} />
           </Route>
         </Routes>
       </BrowserRouter>

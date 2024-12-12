@@ -1,11 +1,13 @@
 import s from "./Profile.module.css";
 import { useAuth } from "../../context/AuthContext.jsx";
+import Navbar from "../../components/navbar/Navbar.jsx";
 const Profile = () => {
   const { user, level } = useAuth();
-  console.log("user");
-  console.log(user);
+
   return (
     <>
+      <Navbar />
+
       <div className={s.profileContainer}>
         <div className={s.profileInfo}>
           <div className={s.userDetails}>

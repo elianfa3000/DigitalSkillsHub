@@ -2,6 +2,7 @@ import s from "./Homepage.module.css";
 import Navbar from "../../components/navbar/Navbar.jsx";
 import img1 from "../../public/img1.jpg";
 import { TfiHandPointRight } from "react-icons/tfi";
+
 //import FormOne from "../../components/forms/FormOne.jsx";
 
 const Homepage = () => {

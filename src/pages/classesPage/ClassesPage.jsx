@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import s from "./ClassesPage.module.css";
 import Navbar from "../../components/navbar/Navbar.jsx";
 import img1 from "../../public/webImage.jpg";
@@ -6,16 +5,13 @@ import img2 from "../../public/collaboration.png";
 import img3 from "../../public/study.png";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext.jsx";
+import { updateLevel } from "../../api/auth.js";
 const ClassesPage = () => {
   const navigation = useNavigate();
   const { level } = useAuth();
-  console.log("*************/");
-  console.log(level < 2);
-  console.log(!(1 > 2));
-  console.log(true);
-  useEffect(() => {
-    console.log("Level cambió a:", level);
-  }, [level]);
+  const level2 = async () => {
+    await updateLevel({ level: 3 });
+  };
   return (
     <>
       <Navbar />
@@ -66,6 +62,11 @@ const ClassesPage = () => {
           <img src={img3} alt="" className={s.img} />
           <h2 className={s.title}>NIVEL 3</h2>
         </div>
+      </div>
+      <div>
+        <button onClick={level2}>
+          <h3>level 2</h3>
+        </button>
       </div>
     </>
   );
