@@ -4,9 +4,12 @@ import {
   signinRequest,
   verifyToken,
   logOut,
+  updateLevel,
 } from "../api/auth";
 import cookies from "js-cookie";
+
 const AuthContext = createContext();
+
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
@@ -23,6 +26,7 @@ export const Context = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [level, setLevel] = useState(null); /*//////// */
   //
+
   const signup = async (user) => {
     try {
       const res = await registerRequest(user);
@@ -53,6 +57,19 @@ export const Context = ({ children }) => {
     setIsAuthenticated(false);
     setUser([]);
   };
+  const update = async (user) => {
+    try {
+      const newUser = await updateLevel(user);
+      console.log(newUser.data);
+
+      setUser(newUser.data);
+      return newUser.data;
+    } catch (err) {
+      console.log(err);
+      setErrors(err.response.data);
+    }
+  };
+
   useEffect(() => {
     async function checkLogin() {
       const cookie = cookies.get();
@@ -77,6 +94,7 @@ export const Context = ({ children }) => {
         setUser(res.data);
         setLoading(false);
         setLevel(res.data.level); //
+
         return;
       } catch (error) {
         setIsAuthenticated(false);
@@ -90,7 +108,7 @@ export const Context = ({ children }) => {
     if (errors.length > 0) {
       setTimeout(() => {
         setErrors([]);
-      }, 3500);
+      }, 4500);
     }
   }, [errors]);
 
@@ -105,7 +123,7 @@ export const Context = ({ children }) => {
         isAuthenticated,
         errors,
         level,
-        setLevel,
+        update,
       }}
     >
       {children /* m*/}

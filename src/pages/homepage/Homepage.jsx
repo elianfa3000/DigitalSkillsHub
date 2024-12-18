@@ -102,8 +102,8 @@ const Homepage = () => {
                 <li className={s.benefit}>
                   <TfiHandPointRight className={s.icon} />
                   <span>
-                    Ruta de aprendizaje personalizada: Te guiaremos paso a paso
-                    a través de las habilidades digitales que necesitas
+                    Ruta de aprendizaje: Te guiaremos paso a paso a través de
+                    las habilidades digitales que necesitas
                   </span>
                 </li>
                 <li className={s.benefit}>
@@ -117,7 +117,7 @@ const Homepage = () => {
                 <li className={s.benefit}>
                   <TfiHandPointRight className={s.icon} />
                   <span>
-                    Evaluaciones para medir tu progreso: Realiza evaluaciones
+                    Evaluaciones para asegurar tu progreso: Realiza evaluaciones
                     para verificar tu avance
                   </span>
                 </li>

@@ -11,6 +11,7 @@ const ClassesPage = () => {
   const { level } = useAuth();
   const level2 = async () => {
     await updateLevel({ level: 3 });
+    window.location.reload();
   };
   return (
     <>
@@ -42,7 +43,7 @@ const ClassesPage = () => {
           <h2 className={s.title}>NIVEL 2</h2>
         </div>
 
-        <div className={s.a3}>
+        <div className={s.a3} onClick={() => navigation("/teams")}>
           {!(level >= 3) && (
             <div
               onClick={(e) => e.stopPropagation()}

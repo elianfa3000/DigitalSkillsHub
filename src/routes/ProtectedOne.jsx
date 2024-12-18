@@ -3,7 +3,7 @@ import { useAuth } from "../context/AuthContext.jsx";
 
 const ProtectedOne = () => {
   const { level } = useAuth();
-  if (level >= 1) {
+  if (level >= 2) {
     return <Outlet />;
   }
   return <Navigate to="/classes" replace />;

@@ -136,7 +136,7 @@ const CriticalThinking = () => {
         <a href="https://asana.com/es/resources/critical-thinking-skills">
           contenido extra
         </a>
-        <a href="/webSecurity">-------next-------</a>
+        <a href="/teams">-------next-------</a>
       </div>
     </>
   );

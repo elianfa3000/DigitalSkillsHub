@@ -16,5 +16,10 @@ router.post("/register", validateSchema(registerSchema), register);
 router.post("/signin", validateSchema(signinSchema), signin);
 router.post("/logout", logOut);
 router.get("/verifyToken", verifyTokenReques);
-router.put("/level/:id", verifyToken, updateLevel);
+router.put(
+  "/level/:id",
+  validateSchema(signinSchema),
+  verifyToken, //**para toda pagina con info */
+  updateLevel
+);
 export default router;

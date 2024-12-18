@@ -96,7 +96,7 @@ const SingUp = () => {
             ))}
           </div>
           <button className={s.button} type="submit">
-            INGRESAR
+            REGISTRARSE
           </button>
           <NavLink
             style={{

@@ -110,17 +110,47 @@ export const verifyTokenReques = (req, res) => {
 };
 
 export const updateLevel = async (req, res) => {
-  console.log(req);
-  const level = await User.findByIdAndUpdate(req.user.id, req.body, {
-    new: true,
-  });
-  if (!level) {
-    return res.status(404).send(["**level no found"]);
+  if (req.body.level) {
+    const level = await User.findByIdAndUpdate(req.user.id, req.body, {
+      new: true,
+    });
+    if (!level) {
+      return res.status(404).send(["**level no found"]);
+    }
+    res.json(level);
   }
-  console.log(level);
+
+  if (req.body.password) {
+    const passwordHash = await bcrypt.hash(req.body.password, 10);
+
+    const foundPassword = await User.findByIdAndUpdate(
+      req.user.id,
+      { password: passwordHash },
+      {
+        new: true,
+      }
+    );
+    if (!foundPassword) {
+      return res.status(404).send(["**password no found"]);
+    }
+    res.json(foundPassword);
+  }
+
+  if (req.body.email) {
+    const foundUser = await User.findOne({ email: req.body.email });
+
+    if (foundUser) {
+      return res.status(400).json(["**the email already exists"]);
+    }
+
+    const email = await User.findByIdAndUpdate(req.user.id, req.body, {
+      new: true,
+    });
+    res.json(email);
+  }
+  console.log(req);
   console.log("***************");
   console.log(req.user);
-  res.json(level);
 };
 
 export const logOut = async (req, res) => {

@@ -1,6 +1,6 @@
 const UseInformation = () => {
   return (
-    //1.4 Uso básico de dispositivos - Acceso y uso de información
+    //1.4-2.1 Uso básico de dispositivos - Acceso y uso de información
     <>
       <div>
         <h2>Introducción</h2>

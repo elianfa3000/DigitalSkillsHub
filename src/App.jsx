@@ -19,6 +19,7 @@ import Profile from "./pages/profile/Profile.jsx";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Test1 from "./pages/test1/Test1.tsx";
+import Teams from "./pages/teams/Teams.jsx";
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -44,29 +45,29 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/classes" element={<ClassesPage />} />
             <Route path="/profile" element={<Profile />} />
-
+            <Route
+              path="/navigation"
+              element={<Navigation outside={false} />}
+            />
+            <Route
+              path="/InfoAccess"
+              element={<InfoAccess outside={false} />}
+            />
+            <Route
+              path="/webSecurity"
+              element={<WebSecurity outside={false} />}
+            />
             <Route element={<ProtectedOne />}>
-              <Route
-                path="/navigation"
-                element={<Navigation outside={false} />}
-              />
-              <Route
-                path="/InfoAccess"
-                element={<InfoAccess outside={false} />}
-              />
-              <Route
-                path="/webSecurity"
-                element={<WebSecurity outside={false} />}
-              />
-            </Route>
-
-            <Route element={<ProtectedTwo />}>
               <Route path="/useInformation" element={<UseInformation />} />
               <Route
                 path="/productivityTools"
                 element={<ProductivityTools />}
               />
               <Route path="/criticalThinking" element={<CriticalThinking />} />
+            </Route>
+
+            <Route element={<ProtectedTwo />}>
+              <Route path="/teams" element={<Teams outside={false} />} />
             </Route>
           </Route>
         </Routes>
