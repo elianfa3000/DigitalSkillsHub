@@ -7,7 +7,7 @@ type QuestionProps = {
   correctOption: string;
   feedbackMessage: string;
   onAnswer: (isCorrect: boolean) => void;
-  ff: (isCorrect: string) => void;
+
 };
 
 const QuizQuestion: React.FC<QuestionProps> = ({
@@ -16,11 +16,11 @@ const QuizQuestion: React.FC<QuestionProps> = ({
   correctOption,
   feedbackMessage,
   onAnswer,
-  ff
+
 }) => {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [feedback, setFeedback] = useState<string | null>(null);
-  ff("ffffffffgfsdsf")/* */
+
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
     if (option === correctOption) {

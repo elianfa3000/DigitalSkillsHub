@@ -26,19 +26,26 @@ export const Context = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [level, setLevel] = useState(null); /*//////// */
   //
-
   const signup = async (user) => {
     try {
+      console.log(user);
       const res = await registerRequest(user);
+      if (!res.data) {
+        throw new Error("Respuesta vacía del servidor");
+      }
       setUser(res.data);
       setIsAuthenticated(true);
       setLevel(res.data.level);
     } catch (err) {
-      setErrors(err.response.data);
-
-      console.log(err);
+      if (err.response && err.response.data) {
+        setErrors([err.response.data.message || "Error desconocido"]);
+      } else {
+        setErrors(["Error al conectar con el servidor"]);
+      }
+      console.error("Error en el registro:", err);
     }
   };
+
   //
   const signin = async (user) => {
     try {
@@ -104,6 +111,7 @@ export const Context = ({ children }) => {
     }
     checkLogin();
   }, []);
+
   useEffect(() => {
     if (errors.length > 0) {
       setTimeout(() => {

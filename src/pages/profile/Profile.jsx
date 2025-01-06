@@ -6,7 +6,7 @@ import Navbar from "../../components/navbar/Navbar.jsx";
 import Editar from "../../public/Editar.jsx";
 import Listo from "../../public/Listo.jsx";
 
-const Profile = () => {
+const Profile = (data) => {
   const { register, handleSubmit } = useForm();
   const { user, level, update, errors } = useAuth();
   const [isEditingEmail, setIsEditingEmail] = useState(false);
@@ -33,7 +33,7 @@ const Profile = () => {
   });
   return (
     <>
-      <Navbar />
+      <Navbar outside={data} />
 
       <div className={s.profileContainer}>
         <div className={s.profileInfo}>
@@ -55,11 +55,11 @@ const Profile = () => {
                 <span>{user.email}</span>
               )}
               {isEditingEmail ? (
-                <div onClick={save}>
-                  <Listo />
+                <div onClick={save} className={s.listo}>
+                  <Listo style={{ cursor: "pointer" }} />
                 </div>
               ) : (
-                <div onClick={edited}>
+                <div onClick={edited} className={s.editar}>
                   <Editar />
                 </div>
               )}
@@ -79,11 +79,11 @@ const Profile = () => {
                 <span>{"*************"}</span>
               )}
               {isEditingPassword ? (
-                <div onClick={save2}>
+                <div onClick={save2} className={s.listo}>
                   <Listo />
                 </div>
               ) : (
-                <div onClick={edited2}>
+                <div onClick={edited2} className={s.editar}>
                   <Editar />
                 </div>
               )}
@@ -102,7 +102,7 @@ const Profile = () => {
             </div>
             <h4 className={s.level}>NIVEL ACTUAL</h4>
             <div className={s.userLevel}>
-              <div className={s.levelBox}>{level}</div>
+              <div className={s.levelBox}>{level === 4 ? 3 : level}</div>
             </div>
           </div>
         </div>

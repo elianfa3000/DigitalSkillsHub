@@ -37,6 +37,35 @@
   color: #838383;
 }
 
+.errors {
+  color: red;
+}
+.listo {
+  margin-top: 20px;
+  padding: 10px;
+
+  background-color: #4caf50;
+  width: 46px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.editar {
+  margin-top: 20px;
+  padding: 10px;
+
+  background-color: #656ac2;
+  width: 46px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.listo:active {
+  transform: scale(0.8);
+}
+.editar:active {
+  transform: scale(0.8);
+}
 .userLevel {
   display: flex;
   justify-content: center;

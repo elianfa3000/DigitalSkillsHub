@@ -15,15 +15,15 @@ const Navbar = (data) => {
       <ul className={s.navUl}>
         <NavLink
           className={s.navLink}
-          to={isAuthenticated ? "/dashboard" : "/homepage"}
+          to={isAuthenticated ? "/dashboard" : "/"}
         >
-          <li>INICIO</li>
+          <li style={{ cursor: "pointer" }}>INICIO</li>
         </NavLink>
       </ul>
-      {!verify && (
+      {!verify.outside === false && (
         <NavLink
           className={s.nav2}
-          to={isAuthenticated ? "/homepage" : "/signin"}
+          to={isAuthenticated ? "/" : "/signin"}
           onClick={logOut}
         >
           <div className={s.register}>

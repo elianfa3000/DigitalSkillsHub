@@ -14,7 +14,7 @@
 .img {
   width: clamp(100px, 100%, 300px);
   height: 300px;
-
+  cursor: pointer;
   margin: auto;
 }
 
@@ -79,6 +79,7 @@
   font-weight: 700;
   color: #1e293b;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

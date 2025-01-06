@@ -5,17 +5,17 @@ import img2 from "../../public/collaboration.png";
 import img3 from "../../public/study.png";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext.jsx";
-import { updateLevel } from "../../api/auth.js";
-const ClassesPage = () => {
+/*import { updateLevel } from "../../api/auth.js";*/
+const ClassesPage = (data) => {
   const navigation = useNavigate();
   const { level } = useAuth();
-  const level2 = async () => {
-    await updateLevel({ level: 3 });
-    window.location.reload();
-  };
+  /*const level2 = async () => {
+    await updateLevel({ level: 1 });
+    //window.location.reload();
+  };*/
   return (
     <>
-      <Navbar />
+      <Navbar outside={data} />
       <div className={s.all}>
         <div className={s.a1} onClick={() => navigation("/navigation")}>
           <img src={img1} alt="" className={s.img} />
@@ -43,7 +43,7 @@ const ClassesPage = () => {
           <h2 className={s.title}>NIVEL 2</h2>
         </div>
 
-        <div className={s.a3} onClick={() => navigation("/teams")}>
+        <div className={s.a3} onClick={() => navigation("/productivityTools")}>
           {!(level >= 3) && (
             <div
               onClick={(e) => e.stopPropagation()}
@@ -64,11 +64,13 @@ const ClassesPage = () => {
           <h2 className={s.title}>NIVEL 3</h2>
         </div>
       </div>
-      <div>
-        <button onClick={level2}>
-          <h3>level 2</h3>
-        </button>
-      </div>
+      {/*
+        <div>
+          <button onClick={level2}>
+            <h3>level 2</h3>
+          </button>
+        </div>
+      */}
     </>
   );
 };

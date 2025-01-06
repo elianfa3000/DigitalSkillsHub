@@ -6,7 +6,7 @@ import { useNavigate, NavLink } from "react-router-dom";
 import Svg1 from "../../public/Svg1.tsx";
 import { useAuth } from "../../context/AuthContext.jsx";
 
-const SignIn = () => {
+const SignIn = (data) => {
   const navigate = useNavigate();
   //
   const { signin, isAuthenticated, errors } = useAuth();
@@ -26,7 +26,7 @@ const SignIn = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar outside={data} />
 
       <div className={s.containerForm}>
         <form className={s.form} onSubmit={onSubmit}>

@@ -5,7 +5,7 @@ const ProtectedTwo = () => {
   if (level >= 3) {
     return <Outlet />;
   }
-  return <Navigate to="/classes" replace></Navigate>;
+  return <Navigate to="/" replace></Navigate>;
 };
 
 export default ProtectedTwo;

@@ -5,12 +5,12 @@ import { TfiHandPointRight } from "react-icons/tfi";
 
 //import FormOne from "../../components/forms/FormOne.jsx";
 
-const Homepage = () => {
+const Homepage = (data) => {
   //git remote add origin https://github.com/elianfa3000/DigitalSkillsHub.git
 
   return (
     <>
-      <Navbar />
+      <Navbar outside={data} />
 
       <div className={s.welcome} /*Diálogo de bienvenida (1)*/>
         <div className={s.containerOne}>
@@ -40,35 +40,30 @@ const Homepage = () => {
             <li className={s.concept}>
               <h3>Nivel 1</h3>
               <p>
-                aprenderás a dominar los fundamentos básicos de las competencias
-                digitales, como el uso básico de dispositivos, la seguridad en
-                línea y el acceso y uso de información. Estas habilidades son
-                fundamentales para cualquier persona que desee aprovechar al
-                máximo las oportunidades que ofrece la era digital
-              </p>
-              <p>
-                A medida que avanzas en el nivel 1, te enfocaremos en
-                desarrollar tus habilidades digitales de manera más avanzada,
-                como la creación de contenido digital, la comunicación y
-                colaboración en línea, y el pensamiento crítico y la
-                alfabetización digital.
+                En este nivel aprenderás los conceptos esenciales para manejar
+                herramientas digitales con confianza, incluyendo la navegación
+                web segura, búsquedas efectivas en Google y principios de
+                seguridad en línea para proteger tu información personal.
               </p>
             </li>
             <li className={s.concept}>
               <h3>Nivel 2</h3>
               <p>
-                aprenderás a crear contenido digital de alta calidad, utilizando
-                herramientas de multimedia y colaborativas como Google Drive y
-                Microsoft Teams. También aprenderás a planificar y organizar tu
-                estudio en línea, y a utilizar calendarios y recordatorios para
-                mantener tus metas a la vista
+                Este nivel se enfoca en desarrollar habilidades para estudiar de
+                manera más eficiente mediante técnicas como el método Cornell y
+                la técnica Pomodoro, además de aprender a evaluar la calidad de
+                la información y aplicar el pensamiento crítico en entornos
+                digitales.
               </p>
             </li>
 
             <li className={s.concept}>
               <h3>Nivel 3</h3>
               <p>
-                aprenderás a resolver problemas complejos utilizando herra,,
+                Aquí aprenderás a utilizar herramientas esenciales como Google
+                Drive, Google Docs y Microsoft Teams para organizar, colaborar y
+                gestionar tus proyectos de forma eficiente, facilitando el
+                trabajo en equipo y la productividad en línea.
               </p>
             </li>
           </ul>
@@ -124,7 +119,7 @@ const Homepage = () => {
               </ul>
             </div>
           </div>
-          <a href="signup" className={s.button}>
+          <a href="/signup" className={s.button}>
             ¡Comienza a aprender ahora!
           </a>
         </div>

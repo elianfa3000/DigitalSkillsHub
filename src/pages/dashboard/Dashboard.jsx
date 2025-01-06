@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar/Navbar.jsx";
 import Book from "../../public/Book.jsx";
 import User from "../../public/User.jsx";
 import { useNavigate } from "react-router-dom";
-const Dashboard = () => {
+const Dashboard = (data) => {
   const navigate = useNavigate();
 
   const classs = () => {
@@ -14,7 +14,7 @@ const Dashboard = () => {
   };
   return (
     <>
-      <Navbar />
+      <Navbar outside={data} />
       <div className={s.all}>
         <div className={s.a1} onClick={classs}>
           <div className={s.svg}>

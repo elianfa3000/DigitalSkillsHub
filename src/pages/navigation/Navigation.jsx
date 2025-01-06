@@ -120,17 +120,17 @@ const Navigation = (data) => {
           </div>
         </div>
 
-        <div className={s.extraContent}>
+        <div className={s.safetyTips}>
           <h3 className={s.sectionTitle}>Contenido extra:</h3>
           <a
-            className={s.extraLink}
+            className={s.more}
             href="https://latam.kaspersky.com/resource-center/threats/top-scams-how-to-avoid-becoming-a-victim"
           >
             ¿Cuáles son las principales estafas en línea y cómo evitarlas?
           </a>
         </div>
 
-        <div className={s.conclusionSection}>
+        <div className={s.safetyTips}>
           <h2 className={s.sectionTitle}>Conclusión</h2>
           <p className={s.conclusionText}>
             Aprender a utilizar un navegador web de manera eficiente es el

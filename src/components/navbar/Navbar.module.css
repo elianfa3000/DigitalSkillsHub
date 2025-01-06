@@ -61,7 +61,7 @@
 
 .register {
   user-select: none;
-
+  cursor: pointer;
   color: #ffffff;
   margin: auto;
 }

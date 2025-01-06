@@ -6,7 +6,7 @@ const ProtectedRoute = () => {
   if (loading) return <h1> loading...</h1>;
 
   if (!loading && !isAuthenticated) {
-    return <Navigate to="/homepage" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return <Outlet />;

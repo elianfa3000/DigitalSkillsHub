@@ -6,7 +6,7 @@ const ProtectedOne = () => {
   if (level >= 2) {
     return <Outlet />;
   }
-  return <Navigate to="/classes" replace />;
+  return <Navigate to="/" replace />;
 };
 
 export default ProtectedOne;

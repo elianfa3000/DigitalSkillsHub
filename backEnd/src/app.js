@@ -8,10 +8,11 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["https://elianfa3000.github.io" /*, "http://localhost:5173"*/], //http://localhost:5173
     credentials: true,
   })
 );
+
 //app.use(morgan("dev"));
 app.use(express.json());
 

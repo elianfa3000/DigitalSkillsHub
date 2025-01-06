@@ -6,7 +6,7 @@ import Svg1 from "../../public/Svg1";
 import { useEffect } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 
-const SingUp = () => {
+const SingUp = (data) => {
   const navigate = useNavigate();
   //
   const { signup, errors, isAuthenticated } = useAuth();
@@ -14,7 +14,14 @@ const SingUp = () => {
   const { register, handleSubmit } = useForm();
   //
   const onSubmit = handleSubmit(async (value) => {
-    signup(value);
+    try {
+      await signup(value);
+      alert("✅ Registro exitoso");
+    } catch (error) {
+      console.error("Error al registrar:", error);
+
+      alert("❌ No se pudo completar el registro.");
+    }
   });
   //
 
@@ -26,7 +33,7 @@ const SingUp = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar outside={data} />
 
       <div className={s.containerForm}>
         <form className={s.form} onSubmit={onSubmit}>

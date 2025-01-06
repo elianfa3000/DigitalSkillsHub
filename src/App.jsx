@@ -19,7 +19,11 @@ import Profile from "./pages/profile/Profile.jsx";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Test1 from "./pages/test1/Test1.tsx";
+import Test2 from "./pages/test2/Test2.tsx";
+import Test3 from "./pages/test3/Test3.tsx";
 import Teams from "./pages/teams/Teams.jsx";
+import Congratulations from "./pages/congratulations/Congratulations.jsx";
+import StudyTechniques from "./pages/studyTechniques/StudyTechniques.jsx";
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -33,41 +37,35 @@ function App() {
 
   return (
     <Context>
-      <BrowserRouter>
+      <BrowserRouter basename="/DigitalSkillsHub">
         <ScrollToTop />
         <Routes>
-          <Route path="/test1" element={<Test1 />} />
-
-          <Route path="/homepage" element={<Homepage />} />
+          <Route path="" element={<Homepage outside={true} />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
           <Route element={<ProtectedRoute />}>
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/classes" element={<ClassesPage />} />
+            <Route path="/dashboard" element={<Dashboard outside={true} />} />
+            <Route path="/classes" element={<ClassesPage outside={true} />} />
             <Route path="/profile" element={<Profile />} />
-            <Route
-              path="/navigation"
-              element={<Navigation outside={false} />}
-            />
-            <Route
-              path="/InfoAccess"
-              element={<InfoAccess outside={false} />}
-            />
-            <Route
-              path="/webSecurity"
-              element={<WebSecurity outside={false} />}
-            />
+            <Route path="/navigation" element={<Navigation />} />
+            <Route path="/InfoAccess" element={<InfoAccess />} />
+            <Route path="/webSecurity" element={<WebSecurity />} />
+            <Route path="/test1" element={<Test1 />} />
             <Route element={<ProtectedOne />}>
               <Route path="/useInformation" element={<UseInformation />} />
+              <Route path="/studytechniques" element={<StudyTechniques />} />
+              <Route path="/criticalThinking" element={<CriticalThinking />} />
+              <Route path="/test2" element={<Test2 />} />
+            </Route>
+
+            <Route element={<ProtectedTwo />}>
               <Route
                 path="/productivityTools"
                 element={<ProductivityTools />}
               />
-              <Route path="/criticalThinking" element={<CriticalThinking />} />
-            </Route>
-
-            <Route element={<ProtectedTwo />}>
-              <Route path="/teams" element={<Teams outside={false} />} />
+              <Route path="/teams" element={<Teams />} />
+              <Route path="/test3" element={<Test3 />} />
+              <Route path="/congratulations" element={<Congratulations />} />
             </Route>
           </Route>
         </Routes>

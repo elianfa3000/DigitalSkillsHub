@@ -4,12 +4,39 @@
   padding: 70px 20px 20px;
   line-height: 1.6;
 }
+
+.introSection,
+.safetySection,
+.extraContent,
+.conclusionSection {
+  margin-bottom: 4rem;
+}
+.safetyTips {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 20px 0;
+}
 .sectionTitle {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   color: #333;
   margin-bottom: 1rem;
   padding-top: 1rem;
 }
+
+.subTitle {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.mainTitle {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
 .introText,
 .descriptionText,
 .tipText,
@@ -18,16 +45,21 @@
   color: #555;
   margin-bottom: 1rem;
 }
-.safetyTips {
-  background-color: #f9f9f9;
-  padding: 1.5rem;
-  border-radius: 10px;
-  margin: 20px 0;
-}
-.subTitle {
-  font-size: 1.25rem;
+
+.exampleText {
+  font-style: italic;
   color: #555;
-  margin-bottom: 1.5rem;
+}
+
+.videoContainer {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.videoEmbed {
+  max-width: 100%;
+  border-radius: 10px;
 }
 
 .more {
@@ -41,35 +73,6 @@
   cursor: pointer;
   font-size: 16px;
 }
-.videoContainer {
-  display: flex;
-  justify-content: center;
-  margin: 1.5rem 0;
-}
-
-.iconContainer {
-  display: flex;
-  flex-wrap: wrap; /* Permite que los íconos se muevan a la siguiente línea si no caben */
-  justify-content: space-around; /* Espacio uniforme entre íconos */
-  gap: 1rem; /* Espaciado entre íconos */
-  list-style: none;
-}
-.icon {
-  display: flex;
-
-  margin: auto;
-}
-.img {
-  display: flex;
-  margin: auto;
-  width: 100%;
-  max-width: 1000px;
-}
-.videoEmbed {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
 .buttonGroup {
   display: flex;
   justify-content: center;

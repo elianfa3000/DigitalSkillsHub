@@ -1,14 +1,17 @@
 import Navbar from "../../components/navbar/Navbar";
-
+import { useNavigate } from "react-router-dom";
+import flecha from "../../public/flecha.png";
+import s from "./InfoAccess.module.css";
 const InfoAccess = (data) => {
   //1.2    Uso básico de dispositivos - Búsqueda de información en Google
+  const navigate = useNavigate();
   return (
     <>
       <Navbar outside={data} />
-      <div>
-        <div>
-          <h2>Introducción</h2>
-          <p>
+      <div className={s.container}>
+        <div className={s.introSection}>
+          <h2 className={s.sectionTitle}>Introducción</h2>
+          <p className={s.introText}>
             Buscar información en línea es una de las habilidades más
             importantes para aprender de manera efectiva. En esta sección,
             aprenderás a utilizar Google, el motor de búsqueda más utilizado,
@@ -16,190 +19,216 @@ const InfoAccess = (data) => {
             precisa. También te enseñaremos a evaluar la calidad de las fuentes
             para que utilices información confiable y segura.
           </p>
-          <h2>Búsqueda en Google</h2>
-          <p>
+          <h2 className={s.sectionTitle}>Búsqueda en Google</h2>
+          <p className={s.descriptionText}>
             Google es un motor de búsqueda, lo que significa que busca en todo
             Internet las páginas web que contienen las palabras clave que
             introduces. Es como una gran biblioteca digital que organiza los
             resultados para mostrarte los más relevantes
           </p>
         </div>
-        <div>
-          <h2>Búsqueda básica en Google</h2>
-          <p>
+
+        <div className={s.safetyTips}>
+          <h2 className={s.sectionTitle}>Búsqueda básica en Google</h2>
+          <p className={s.tipText}>
             Para realizar una búsqueda básica en Google, solo necesitas escribir
             las palabras clave relacionadas con lo que quieres encontrar. Aquí
             tienes algunos consejos para mejorar tus resultados:
           </p>
 
-          <h3>1. Usa Palabras Clave Específicas</h3>
-          <p>
+          <h3 className={s.subTitle}>1. Usa Palabras Clave Específicas</h3>
+          <p className={s.tipText}>
             En lugar de escribir una frase larga, utiliza palabras clave cortas
             que describan exactamente lo que necesitas
           </p>
-          <p>
+          <p className={s.exampleText}>
             <strong>Ejemplo:</strong> En lugar de escribir ``¿Cómo puedo mejorar
             mi concentración mientras estudio``, escribe ``concentración
             estudiar consejos``
           </p>
 
-          <h3>2. Haz Preguntas Simples</h3>
-          <p>Google es excelente para responder preguntas directas</p>
-          <p>
+          <h3 className={s.subTitle}>2. Haz Preguntas Simples</h3>
+          <p className={s.tipText}>
+            Google es excelente para responder preguntas directas
+          </p>
+          <p className={s.exampleText}>
             <strong>Ejemplo:</strong> ``¿Qué es la fotosíntesis`` te dará una
             respuesta clara y precisa
           </p>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/fXPFpNASbRE?rel=0"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <div className={s.videoContainer}>
+            <iframe
+              className={s.videoEmbed}
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/fXPFpNASbRE?rel=0"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
         <div>
-          <h1>Búsqueda Avanzada: Filtra y Encuentra Información Relevante</h1>
-          <p>
+          <h2 className={s.sectionTitle}>
+            Búsqueda Avanzada: Filtra y Encuentra Información Relevante
+          </h2>
+          <p className={s.tipText}>
             A veces, una búsqueda simple no es suficiente. Google te permite
             hacer búsquedas más avanzadas para encontrar exactamente lo que
             necesitas.
           </p>
 
-          <h2>Herramientas Útiles de Google</h2>
+          <h2 className={s.sectionTitle}>Herramientas Útiles de Google</h2>
 
-          <h3>Búsqueda entre Comillas (" ")</h3>
-          <p>
+          <h3 className={s.subTitle}>Búsqueda entre Comillas (" ")</h3>
+          <p className={s.tipText}>
             Usa comillas para buscar una frase exacta. Esto te ayudará a
             encontrar resultados que contengan exactamente esas palabras en ese
             orden.
           </p>
-          <p>
+          <p className={s.exampleText}>
             <strong>Ejemplo:</strong> "teoría del Big Bang"
           </p>
 
-          <h3>Búsqueda en un Sitio Específico (site:)</h3>
-          <p>
+          <h3 className={s.subTitle}>
+            Búsqueda en un Sitio Específico (site:)
+          </h3>
+          <p className={s.tipText}>
             Si solo quieres resultados de un sitio web específico, escribe{" "}
             <code>site:</code> seguido de la dirección del sitio.
           </p>
-          <p>
+          <p className={s.exampleText}>
             <strong>Ejemplo:</strong> "cambio climático site:.org" para obtener
             solo resultados de la página de las Naciones Unidas.
           </p>
 
-          <h3>Excluir Términos (-)</h3>
-          <p>
+          <h3 className={s.subTitle}>Excluir Términos (-)</h3>
+          <p className={s.tipText}>
             Si quieres excluir palabras de los resultados, usa un guion antes de
             la palabra que deseas eliminar.
           </p>
-          <p>
+          <p className={s.exampleText}>
             <strong>Ejemplo:</strong> "jaguar -automóvil" si quieres buscar
             información sobre el animal, no el coche.
           </p>
 
-          <h3>Búsqueda por Tipo de Archivo (filetype:)</h3>
-          <p>
+          <h3 className={s.subTitle}>
+            Búsqueda por Tipo de Archivo (filetype:)
+          </h3>
+          <p className={s.tipText}>
             Si estás buscando un documento específico, como un PDF o una
             presentación, puedes usar <code>filetype:</code>.
           </p>
-          <p>
+          <p className={s.exampleText}>
             <strong>Ejemplo:</strong> "reglamento escolar filetype:pdf"
           </p>
-          <iframe
-            width="315"
-            height="560"
-            src="https://www.youtube.com/embed/CfhEzDd-hFM?rel=0" //?rel=0
-            title="YouTube Shorts"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <br />
+
+          <div className={s.videoContainer}>
+            <iframe
+              className={s.videoEmbed}
+              width="315"
+              height="560"
+              src="https://www.youtube.com/embed/CfhEzDd-hFM?rel=0" //?rel=0
+              title="YouTube Shorts"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
         <div>
-          <h2>Evaluación de la credibilidad de las fuentes</h2>
-          <p>
+          <h2 className={s.sectionTitle}>
+            Evaluación de la credibilidad de las fuentes
+          </h2>
+          <p className={s.tipText}>
             No toda la información que encuentras en Internet es confiable. Es
             importante que sepas cómo evaluar la calidad de una fuente antes de
             usarla. Aquí te damos algunos consejos:
           </p>
 
-          <h3>1. Revisa el Autor</h3>
-          <p>
+          <h3 className={s.subTitle}>1. Revisa el Autor</h3>
+          <p className={s.tipText}>
             Asegúrate de que la información provenga de una fuente confiable o
             de un experto en el tema.
           </p>
-          <p>
+          <p className={s.exampleText}>
             <strong>Ejemplo:</strong> Un artículo sobre salud escrito por un
             doctor es más confiable que uno de un blog sin autor conocido.
           </p>
 
-          <h3>2. Fecha de Publicación</h3>
-          <p>
+          <h3 className={s.subTitle}>2. Fecha de Publicación</h3>
+          <p className={s.tipText}>
             Verifica que la información esté actualizada, especialmente en temas
             que cambian rápidamente, como la ciencia o la tecnología.
           </p>
 
-          <h3>3. Extensión y Profundidad</h3>
-          <p>
+          <h3 className={s.subTitle}>3. Extensión y Profundidad</h3>
+          <p className={s.tipText}>
             Los artículos cortos y con poca profundidad pueden no ser fiables.
             Busca información detallada que explique el tema en su totalidad.
           </p>
 
-          <h3>4. Dominio de la Web</h3>
-          <p>
+          <h3 className={s.subTitle}>4. Dominio de la Web</h3>
+          <p className={s.tipText}>
             Prefiere sitios web con dominios como <code>.edu</code>,{" "}
             <code>.gov</code>, o <code>.org</code>, ya que suelen ser más
             confiables que otros dominios.
           </p>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/VNjSCUxrvWQ?rel=0"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+
+          <div className={s.videoContainer}>
+            <iframe
+              className={s.videoEmbed}
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/VNjSCUxrvWQ?rel=0"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
         <div>
-          <h2>Uso ético de la información</h2>
-          <p>
+          <h2 className={s.sectionTitle}>Uso ético de la información</h2>
+          <p className={s.conclusionText}>
             Una vez que encuentras información confiable, es importante usarla
             de manera ética. Esto incluye:
           </p>
 
-          <h3>1. Citar Correctamente las Fuentes</h3>
-          <p>
+          <h3 className={s.subTitle}>1. Citar Correctamente las Fuentes</h3>
+          <p className={s.tipText}>
             Si tomas información de una página web, asegúrate de citarla
             correctamente. Esto significa dar crédito al autor original y evitar
             el plagio. Citar correctamente es fundamental en trabajos de
             investigación y académicos
           </p>
 
-          <h3>2. Respetar los Derechos de Autor</h3>
-          <p>
+          <h3 className={s.subTitle}>2. Respetar los Derechos de Autor</h3>
+          <p className={s.tipText}>
             No uses imágenes, textos o videos sin permiso. Siempre verifica si
             el contenido es de libre uso o si tiene licencia. Usar contenido sin
             autorización puede llevar a problemas legales
           </p>
         </div>
-        <div style={{ background: "red" }}>
-          Actividad práctica <br />
-          Ahora que sabes cómo realizar búsquedas avanzadas y evaluar la
-          credibilidad de las fuentes, te invitamos a realizar la siguiente
-          actividad:
-          <br /> Realiza una búsqueda en Google sobre un tema que te interese
-          utilizando los consejos de búsqueda avanzada que aprendiste.
-          <br /> Encuentra dos fuentes confiables y explica por qué las
-          consideras confiables (autor, fecha, dominio).
-          <br /> Escribe un breve resumen de la información que encontraste y
-          cita correctamente las fuentes.
+        <div className={s.safetyTips}>
+          <h2 className={s.sectionTitle}>Actividad práctica</h2>
+          <p className={s.tipText}>
+            Ahora que sabes cómo realizar búsquedas avanzadas y evaluar la
+            credibilidad de las fuentes, te invitamos a realizar la siguiente
+            actividad:
+            <br />- Realiza una búsqueda en Google sobre un tema que te interese
+            utilizando los consejos de búsqueda avanzada que aprendiste.
+            <br />- Encuentra dos fuentes confiables y explica por qué las
+            consideras confiables (autor, fecha, dominio).
+            <br /> -Escribe un breve resumen de la información que encontraste y
+            cita correctamente las fuentes.
+          </p>
         </div>
-        <div>
-          <h3>Contenido extra</h3>
+        <div className={s.safetyTips}>
+          <h3 className={s.subTitle}>Contenido extra</h3>
           <a
+            className={s.more}
             href="https://www.umce.cl/images/recomendaciones-informacion-desde-internet.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -207,16 +236,35 @@ const InfoAccess = (data) => {
             Ver PDF
           </a>
         </div>
-        <div>
-          <h2>Conclusión</h2>
-          <p>
+        <div className={s.safetyTips}>
+          <h2 className={s.sectionTitle}>Conclusión</h2>
+          <p className={s.conclusionText}>
             Buscar información en línea es una habilidad fundamental para tu
             desarrollo académico y profesional. Saber cómo usar Google de manera
             eficiente te ayudará a encontrar información precisa y confiable y a
             utilizarla de manera ética. ¡Pon en práctica lo que has aprendido y
             sigue explorando el vasto mundo de la información en línea!
           </p>
-          <a href="/webSecurity">-------next-------</a>
+
+          <div className={s.buttonGroup}>
+            <button
+              className={s.button}
+              onClick={() => {
+                navigate("/navigation");
+              }}
+            >
+              <img className={s.left} src={flecha} alt="<--" />
+            </button>
+            <button
+              className={s.button}
+              src={flecha}
+              onClick={() => {
+                navigate("/webSecurity");
+              }}
+            >
+              <img className={s.right} src={flecha} alt="-->" />
+            </button>
+          </div>
         </div>
       </div>
     </>
