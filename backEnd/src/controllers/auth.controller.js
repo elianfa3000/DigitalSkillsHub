@@ -6,6 +6,7 @@ import { config } from "dotenv";
 config();
 const passwordx = process.env.CREDENT;
 
+//
 export const register = async (req, res) => {
   const { email, password, username } = req.body;
 
@@ -42,11 +43,17 @@ export const register = async (req, res) => {
         }
 
         res.cookie("token", token, {
-          /*httpOnly: true */
-          secure: true,
-          sameSite: "None",
+          httpOnly: false, //process.env.NODE_ENV === "production", //Solo true en producción para seguridad
+          secure: process.env.NODE_ENV === "production", //  Solo HTTPS en producción
+          sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax", // ✅ None para producción, Lax para local
+          expires: new Date(Date.now() + 24 * 60 * 60 * 1000), // ✅ Expira en 24 horas
         });
-        console.log("Entorno actual:", process.env.NODE_ENV);
+
+        /*res.cookie("token", token, {
+            httpOnly: true, // ✅ Protege la cookie contra JS=aplication ya no aparece la cookie
+          secure: process.env.NODE_ENV === "production", //producción (HTTPS)=production   * local=development
+          sameSite: "None", // ✅ Permitir cookies entre diferentes dominios, Lax es lo contrario
+        });*/
 
         res.status(200).json({
           id: savedUser._id,
@@ -83,12 +90,20 @@ export const signin = async (req, res) => {
           console.log(err);
           return res.status(500).send(["**error creating token"]);
         }
+
         res.cookie("token", token, {
-          /*
-          httpOnly: true */
-          secure: true,
-          sameSite: "None",
+          httpOnly: false, //process.env.NODE_ENV === "production", // ✅ Solo true en producción para seguridad
+          secure: process.env.NODE_ENV === "production", // ✅ Solo HTTPS en producción
+          sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax", // ✅ None para producción, Lax para local
+          expires: new Date(Date.now() + 24 * 60 * 60 * 1000), // ✅ Expira en 24 horas
         });
+
+        /* res.cookie("token", token, {
+         
+          httpOnly: true,
+          secure: process.env.NODE_ENV === "production", //producción (HTTPS)=production   * local=development
+          sameSite: "None", // ✅ Permitir cookies entre diferentes dominios, Lax es lo contrario
+        });*/
         res.status(200).json({
           id: foundUser.id,
           username: foundUser.username,
@@ -109,7 +124,12 @@ export const signin = async (req, res) => {
 export const verifyTokenReques = (req, res) => {
   const { token } = req.cookies;
   console.log(passwordx);
-  console.log("passwordx");
+  console.log(token);
+  console.log(req);
+  console.log(
+    "******************************************************************************/*/*/"
+  ); /*
+  console.log("passwordx");*/
   if (!token) {
     return res.status(401).send(["**token unexist"]);
   }
@@ -126,6 +146,7 @@ export const verifyTokenReques = (req, res) => {
       username: userFound.username,
       email: userFound.email,
       level: userFound.level,
+      f: token,
     });
   });
 };
@@ -176,6 +197,11 @@ export const updateLevel = async (req, res) => {
 };
 
 export const logOut = async (req, res) => {
-  res.cookie("token", "" /* { expires: new Date(0) }*/);
+  res.cookie("token", "", {
+    httpOnly: false, //process.env.NODE_ENV === "production", //  Coincide con la creación
+    secure: process.env.NODE_ENV === "production", //  Coincide con la creación
+    sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax", //  Coincide con la creación
+    expires: new Date(0), // ✅ Expira inmediatamente
+  });
   return res.sendStatus(200);
 };

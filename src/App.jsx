@@ -37,7 +37,7 @@ function App() {
 
   return (
     <Context>
-      <BrowserRouter basename="/DigitalSkillsHub">
+      <BrowserRouter /*basename="/DigitalSkillsHub"*/>
         <ScrollToTop />
         <Routes>
           <Route path="" element={<Homepage outside={true} />} />
