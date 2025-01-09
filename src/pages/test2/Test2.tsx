@@ -132,7 +132,7 @@ const Test2: React.FC = (data) => {
             <Navbar outside={data} />
             <div className={styles.Container}>
                 <div className={styles.container}>
-                    <h2 className={styles.sectionTitle}>Evaluacíon 2</h2>
+                    <h2 className={styles.sectionTitle}>Evaluación 2</h2>
                     <h3 className={styles.subTitle}>
                         ¡Bienvenido a tu segunda evaluación! Esta prueba está diseñada para evaluar tus habilidades en la evaluación de información, técnicas de estudio y pensamiento crítico.
 

@@ -7,7 +7,7 @@ const Dashboard = (data) => {
   const navigate = useNavigate();
 
   const classs = () => {
-    return navigate("/classes");
+    return navigate("/introClasses");
   };
   const profile = () => {
     return navigate("/profile");
@@ -20,7 +20,7 @@ const Dashboard = (data) => {
           <div className={s.svg}>
             <Book />
           </div>
-          <h2 className={s.title}>Mis Clases</h2>
+          <h2 className={s.title}>Clases</h2>
           <p className={s.description}>Explora tus clases y aprende</p>
         </div>
 
@@ -28,7 +28,7 @@ const Dashboard = (data) => {
           <div className={s.svg}>
             <User />
           </div>
-          <h2 className={s.title}>Mi Perfil</h2>
+          <h2 className={s.title}>Perfil</h2>
           <p className={s.description}>Perfil personal</p>
         </div>
       </div>

@@ -7,6 +7,7 @@ const passwordx = process.env.CREDENT;
 
 export const verifyToken = async (req, res, next) => {
   const { token } = req.cookies;
+  console.log(token);
   if (!token) {
     return res.status(401).send(["**Unauthorized+"]);
   }

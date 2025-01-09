@@ -6,8 +6,8 @@ const Navbar = (data) => {
   const verify = data.outside;
 
   const { isAuthenticated, logout } = useAuth();
-  const logOut = () => {
-    logout();
+  const logOut = async () => {
+    await logout();
   };
 
   return (

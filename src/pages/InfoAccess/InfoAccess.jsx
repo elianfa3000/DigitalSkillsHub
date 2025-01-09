@@ -35,26 +35,29 @@ const InfoAccess = (data) => {
             las palabras clave relacionadas con lo que quieres encontrar. Aquí
             tienes algunos consejos para mejorar tus resultados:
           </p>
+          <div className={s.toolsG}>
+            <h3 className={s.subTitle}>1. Usa Palabras Clave Específicas</h3>
+            <p className={s.tipText}>
+              En lugar de escribir una frase larga, utiliza palabras clave
+              cortas que describan exactamente lo que necesitas
+            </p>
+            <p className={s.exampleText}>
+              <strong>Ejemplo:</strong> En lugar de escribir ``¿Cómo puedo
+              mejorar mi concentración mientras estudio``, escribe
+              ``concentración estudiar consejos``
+            </p>
+          </div>
+          <div className={s.toolsG}>
+            <h3 className={s.subTitle}>2. Haz Preguntas Simples</h3>
+            <p className={s.tipText}>
+              Google es excelente para responder preguntas directas
+            </p>
+            <p className={s.exampleText}>
+              <strong>Ejemplo:</strong> ``¿Qué es la fotosíntesis`` te dará una
+              respuesta clara y precisa
+            </p>
+          </div>
 
-          <h3 className={s.subTitle}>1. Usa Palabras Clave Específicas</h3>
-          <p className={s.tipText}>
-            En lugar de escribir una frase larga, utiliza palabras clave cortas
-            que describan exactamente lo que necesitas
-          </p>
-          <p className={s.exampleText}>
-            <strong>Ejemplo:</strong> En lugar de escribir ``¿Cómo puedo mejorar
-            mi concentración mientras estudio``, escribe ``concentración
-            estudiar consejos``
-          </p>
-
-          <h3 className={s.subTitle}>2. Haz Preguntas Simples</h3>
-          <p className={s.tipText}>
-            Google es excelente para responder preguntas directas
-          </p>
-          <p className={s.exampleText}>
-            <strong>Ejemplo:</strong> ``¿Qué es la fotosíntesis`` te dará una
-            respuesta clara y precisa
-          </p>
           <div className={s.videoContainer}>
             <iframe
               className={s.videoEmbed}
@@ -68,28 +71,28 @@ const InfoAccess = (data) => {
             ></iframe>
           </div>
         </div>
-        <div>
-          <h2 className={s.sectionTitle}>
-            Búsqueda Avanzada: Filtra y Encuentra Información Relevante
-          </h2>
-          <p className={s.tipText}>
-            A veces, una búsqueda simple no es suficiente. Google te permite
-            hacer búsquedas más avanzadas para encontrar exactamente lo que
-            necesitas.
-          </p>
 
-          <h2 className={s.sectionTitle}>Herramientas Útiles de Google</h2>
+        <h2 className={s.sectionTitle}>
+          Búsqueda Avanzada: Filtra y Encuentra Información Relevante
+        </h2>
+        <p className={s.tipText}>
+          A veces, una búsqueda simple no es suficiente. Google te permite hacer
+          búsquedas más avanzadas para encontrar exactamente lo que necesitas.
+        </p>
 
-          <h3 className={s.subTitle}>Búsqueda entre Comillas (" ")</h3>
+        <h2 className={s.sectionTitle}>Herramientas Útiles de Google</h2>
+        <div className={s.toolsG}>
+          <h3 className={s.subTitle}>Búsqueda entre Comillas {`(" ")`}</h3>
           <p className={s.tipText}>
             Usa comillas para buscar una frase exacta. Esto te ayudará a
             encontrar resultados que contengan exactamente esas palabras en ese
             orden.
           </p>
           <p className={s.exampleText}>
-            <strong>Ejemplo:</strong> "teoría del Big Bang"
+            <strong>Ejemplo:</strong> {`"teoría del Big Bang"`}
           </p>
-
+        </div>
+        <div className={s.toolsG}>
           <h3 className={s.subTitle}>
             Búsqueda en un Sitio Específico (site:)
           </h3>
@@ -98,20 +101,22 @@ const InfoAccess = (data) => {
             <code>site:</code> seguido de la dirección del sitio.
           </p>
           <p className={s.exampleText}>
-            <strong>Ejemplo:</strong> "cambio climático site:.org" para obtener
-            solo resultados de la página de las Naciones Unidas.
+            <strong>Ejemplo:</strong> {`"cambio climático site:.org"`} para
+            obtener solo resultados de la página de las Naciones Unidas.
           </p>
-
+        </div>
+        <div className={s.toolsG}>
           <h3 className={s.subTitle}>Excluir Términos (-)</h3>
           <p className={s.tipText}>
             Si quieres excluir palabras de los resultados, usa un guion antes de
             la palabra que deseas eliminar.
           </p>
           <p className={s.exampleText}>
-            <strong>Ejemplo:</strong> "jaguar -automóvil" si quieres buscar
+            <strong>Ejemplo:</strong> {`"jaguar -automóvil"`} si quieres buscar
             información sobre el animal, no el coche.
           </p>
-
+        </div>
+        <div className={s.toolsG}>
           <h3 className={s.subTitle}>
             Búsqueda por Tipo de Archivo (filetype:)
           </h3>
@@ -120,33 +125,35 @@ const InfoAccess = (data) => {
             presentación, puedes usar <code>filetype:</code>.
           </p>
           <p className={s.exampleText}>
-            <strong>Ejemplo:</strong> "reglamento escolar filetype:pdf"
+            <strong>Ejemplo:</strong> {`"reglamento escolar filetype:pdf"`}
           </p>
-          <br />
-
-          <div className={s.videoContainer}>
-            <iframe
-              className={s.videoEmbed}
-              width="315"
-              height="560"
-              src="https://www.youtube.com/embed/CfhEzDd-hFM?rel=0" //?rel=0
-              title="YouTube Shorts"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
         </div>
-        <div>
-          <h2 className={s.sectionTitle}>
-            Evaluación de la credibilidad de las fuentes
-          </h2>
-          <p className={s.tipText}>
-            No toda la información que encuentras en Internet es confiable. Es
-            importante que sepas cómo evaluar la calidad de una fuente antes de
-            usarla. Aquí te damos algunos consejos:
-          </p>
 
+        <br />
+        <h3 className={s.sectionTitle}>TRUCAZOS UTILES</h3>
+        <div className={s.videoContainer}>
+          <iframe
+            className={s.videoEmbed}
+            width="315"
+            height="560"
+            src="https://www.youtube.com/embed/CfhEzDd-hFM?rel=0" //?rel=0
+            title="YouTube Shorts"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        <h2 className={s.sectionTitle}>
+          Evaluación de la credibilidad de las fuentes
+        </h2>
+        <p className={s.tipText}>
+          No toda la información que encuentras en Internet es confiable. Es
+          importante que sepas cómo evaluar la calidad de una fuente antes de
+          usarla. Aquí te damos algunos consejos:
+        </p>
+        <div className={s.toolsG}>
+          {" "}
           <h3 className={s.subTitle}>1. Revisa el Autor</h3>
           <p className={s.tipText}>
             Asegúrate de que la información provenga de una fuente confiable o
@@ -156,61 +163,67 @@ const InfoAccess = (data) => {
             <strong>Ejemplo:</strong> Un artículo sobre salud escrito por un
             doctor es más confiable que uno de un blog sin autor conocido.
           </p>
-
+        </div>
+        <div className={s.toolsG}>
           <h3 className={s.subTitle}>2. Fecha de Publicación</h3>
           <p className={s.tipText}>
             Verifica que la información esté actualizada, especialmente en temas
             que cambian rápidamente, como la ciencia o la tecnología.
           </p>
-
+        </div>
+        <div className={s.toolsG}>
           <h3 className={s.subTitle}>3. Extensión y Profundidad</h3>
           <p className={s.tipText}>
             Los artículos cortos y con poca profundidad pueden no ser fiables.
             Busca información detallada que explique el tema en su totalidad.
           </p>
-
+        </div>
+        <div className={s.toolsG}>
+          {" "}
           <h3 className={s.subTitle}>4. Dominio de la Web</h3>
           <p className={s.tipText}>
             Prefiere sitios web con dominios como <code>.edu</code>,{" "}
             <code>.gov</code>, o <code>.org</code>, ya que suelen ser más
             confiables que otros dominios.
           </p>
-
-          <div className={s.videoContainer}>
-            <iframe
-              className={s.videoEmbed}
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/VNjSCUxrvWQ?rel=0"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
         </div>
-        <div>
-          <h2 className={s.sectionTitle}>Uso ético de la información</h2>
-          <p className={s.conclusionText}>
-            Una vez que encuentras información confiable, es importante usarla
-            de manera ética. Esto incluye:
-          </p>
-
-          <h3 className={s.subTitle}>1. Citar Correctamente las Fuentes</h3>
-          <p className={s.tipText}>
-            Si tomas información de una página web, asegúrate de citarla
-            correctamente. Esto significa dar crédito al autor original y evitar
-            el plagio. Citar correctamente es fundamental en trabajos de
-            investigación y académicos
-          </p>
-
-          <h3 className={s.subTitle}>2. Respetar los Derechos de Autor</h3>
-          <p className={s.tipText}>
-            No uses imágenes, textos o videos sin permiso. Siempre verifica si
-            el contenido es de libre uso o si tiene licencia. Usar contenido sin
-            autorización puede llevar a problemas legales
-          </p>
+        <h4 className={s.sectionTitle}>
+          5 Tips para encontrar fuentes de información
+        </h4>
+        <div className={s.videoContainer}>
+          <iframe
+            className={s.videoEmbed}
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/VNjSCUxrvWQ?rel=0"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
+
+        <h2 className={s.sectionTitle}>Uso ético de la información</h2>
+        <p className={s.conclusionText}>
+          Una vez que encuentras información confiable, es importante usarla de
+          manera ética. Esto incluye:
+        </p>
+
+        <h3 className={s.subTitle}>1. Citar Correctamente las Fuentes</h3>
+        <p className={s.tipText}>
+          Si tomas información de una página web, asegúrate de citarla
+          correctamente. Esto significa dar crédito al autor original y evitar
+          el plagio. Citar correctamente es fundamental en trabajos de
+          investigación y académicos
+        </p>
+
+        <h3 className={s.subTitle}>2. Respetar los Derechos de Autor</h3>
+        <p className={s.tipText}>
+          No uses imágenes, textos o videos sin permiso. Siempre verifica si el
+          contenido es de libre uso o si tiene licencia. Usar contenido sin
+          autorización puede llevar a problemas legales
+        </p>
+
         <div className={s.safetyTips}>
           <h2 className={s.sectionTitle}>Actividad práctica</h2>
           <p className={s.tipText}>

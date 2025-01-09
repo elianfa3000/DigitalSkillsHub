@@ -129,31 +129,12 @@ const UseInformation = (data) => {
                 allowfullscreen
               ></iframe>
             </div>
-
-            <li className={s.tipText}>
-              <strong>Mendeley o Zotero:</strong> Herramientas para almacenar y
-              gestionar tus fuentes, útiles para trabajos de investigación.
-            </li>
-
-            <div className={s.videoContainer}>
-              <iframe
-                className={s.videoEmbed}
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/dVd7U6u7kws?si=a0IDxIUdJhFJmVbc"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
           </ul>
         </div>
         <div style={{ backGround: "red" }}>
-          <h2 className={s.sectionTitle}>
+          <h3 className={s.sectionTitle}>
             Práctica: Realiza una pequeña investigación y cita tus fuentes
-          </h2>
+          </h3>
           <p className={s.tipText}>Actividad práctica donde debes:</p>
           <ul style={{ marginLeft: "20px" }}>
             <li className={s.tipText}>
