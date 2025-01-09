@@ -133,7 +133,7 @@ const Test1: React.FC = (data) => {
       <Navbar outside={data} />
       <div className={styles.Container}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Evaluacíon 1</h2>
+          <h2 className={styles.sectionTitle}>Evaluación 1</h2>
           <h3 className={styles.subTitle}>
             ¡Bienvenido a tu primera evaluación! Esta prueba está diseñada para poner a prueba tus conocimientos sobre navegación web, búsqueda de información y seguridad en línea.
 

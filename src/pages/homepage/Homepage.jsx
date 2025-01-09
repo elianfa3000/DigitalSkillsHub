@@ -15,17 +15,18 @@ const Homepage = (data) => {
       <div className={s.welcome} /*Diálogo de bienvenida (1)*/>
         <div className={s.containerOne}>
           <h1 className={s.oneTitle}>
-            Domina las competencias digitales para un mejor futuro
+            Mejora tus competencias digitales para un mejor futuro
           </h1>
           <p className={s.oneSubtitle}>
-            Aprende sobre las competencias digitales y habilidades de
-            aprendizaje en línea que necesitas para mejorar en la era digital
+            Competencias digitales y habilidades de aprendizaje en línea es lo
+            que necesitas para destacar en la era digital
           </p>
           <p className={s.oneDescription}>
-            Dominarás las competencias digitales esenciales y a mejorar tus
-            habilidades de aprendizaje en línea para alcanzar el éxito en la era
-            digital. Nuestra plataforma te ofrece una experiencia de aprendizaje
-            interactiva y de alta calidad. Aprende a tu propio ritmo y recibe
+            {/*Mejora tus competencias digitales esenciales y tus habilidades de
+            aprendizaje en línea para alcanzar el éxito en la era digital.
+            */}
+            Nuestra plataforma te ofrece una experiencia de aprendizaje
+            interactiva y de calidad. Aprende a tu propio ritmo y recibe
             evaluaciones que te ayudarán a medir tu progreso
           </p>
         </div>
@@ -38,32 +39,60 @@ const Homepage = (data) => {
           </p>
           <ul className={s.conceptList}>
             <li className={s.concept}>
-              <h3>Nivel 1</h3>
+              <h3>Conceptos Introductorios</h3>
               <p>
-                En este nivel aprenderás los conceptos esenciales para manejar
-                herramientas digitales con confianza, incluyendo la navegación
-                web segura, búsquedas efectivas en Google y principios de
-                seguridad en línea para proteger tu información personal.
-              </p>
-            </li>
-            <li className={s.concept}>
-              <h3>Nivel 2</h3>
-              <p>
-                Este nivel se enfoca en desarrollar habilidades para estudiar de
-                manera más eficiente mediante técnicas como el método Cornell y
-                la técnica Pomodoro, además de aprender a evaluar la calidad de
-                la información y aplicar el pensamiento crítico en entornos
-                digitales.
+                Comenzarás aprendiendo las bases de las competencias digitales y
+                las habilidades de aprendizaje en línea. Esto incluye cómo
+                navegar por la web de forma segura, realizar búsquedas
+                eficientes, proteger tu privacidad, gestionar tu tiempo de
+                estudio con técnicas como Pomodoro y Cornell, y colaborar con
+                herramientas como Google Drive y Teams.
               </p>
             </li>
 
             <li className={s.concept}>
-              <h3>Nivel 3</h3>
+              <h3>Lengua y Literatura</h3>
               <p>
-                Aquí aprenderás a utilizar herramientas esenciales como Google
-                Drive, Google Docs y Microsoft Teams para organizar, colaborar y
-                gestionar tus proyectos de forma eficiente, facilitando el
-                trabajo en equipo y la productividad en línea.
+                Usarás herramientas como <strong>Google Docs</strong> para
+                redactar textos colaborativos,
+                <strong>Text-to-Speech</strong> para mejorar la comprensión
+                lectora, y <strong>Canva</strong> para crear infografías que
+                representen ideas clave. También practicarás la estructura de
+                ensayos y análisis de contenido usando tecnología.
+              </p>
+            </li>
+
+            <li className={s.concept}>
+              <h3>Matemáticas</h3>
+              <p>
+                Aprenderás con herramientas como <strong>GeoGebra</strong> para
+                graficar funciones,
+                <strong>Photomath</strong> para verificar procedimientos paso a
+                paso y <strong>Excel</strong> y <strong>Google Sheets</strong>{" "}
+                para representar datos y resolver ejercicios de estadística y
+                porcentajes de forma interactiva.
+              </p>
+            </li>
+
+            <li className={s.concept}>
+              <h3>Ciencias Naturales</h3>
+              <p>
+                Utilizarás simuladores como <strong>PhET</strong> para
+                experimentar conceptos de física, química y biología, además de{" "}
+                <strong>Google Earth</strong> para observar la Tierra y
+                fenómenos naturales. Las actividades están diseñadas para
+                explorar científicamente de manera visual y segura.
+              </p>
+            </li>
+
+            <li className={s.concept}>
+              <h3>Estudios Sociales</h3>
+              <p>
+                Con <strong>TimeToast</strong> aprenderás a crear líneas de
+                tiempo interactivas para entender procesos históricos. También
+                usarás <strong>Canva</strong> para elaborar infografías sobre
+                eventos sociales y geográficos, fomentando la organización
+                cronológica y el pensamiento crítico visual.
               </p>
             </li>
           </ul>
@@ -75,7 +104,7 @@ const Homepage = (data) => {
           </h2>
           <p className={s.threeDescription}>
             Regístrate ahora y obtén acceso a un aprendizaje completo para
-            desarrollar las competencias digitales que necesitas para el éxito.
+            mejorar tus competencias digitales que necesitas para el éxito.
           </p>
           <div className={s.listContainer}>
             <img
