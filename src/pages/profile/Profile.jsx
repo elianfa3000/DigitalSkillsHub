@@ -3,8 +3,6 @@ import s from "./Profile.module.css";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../../context/AuthContext.jsx";
 import Navbar from "../../components/navbar/Navbar.jsx";
-import Editar from "../../public/Editar.jsx";
-import Listo from "../../public/Listo.jsx";
 
 const Profile = (data) => {
   const { register, handleSubmit } = useForm();
@@ -12,13 +10,13 @@ const Profile = (data) => {
   const [isEditingEmail, setIsEditingEmail] = useState(false);
   const [isEditingPassword, setIsEditingPassword] = useState(false);
 
-  const edited = () => {
+  const editedCorreo = () => {
     setIsEditingEmail(!isEditingEmail);
   };
-  const edited2 = () => {
+  const editedPassword = () => {
     setIsEditingPassword(!isEditingPassword);
   };
-  const save = handleSubmit(async (values) => {
+  const saveCorreo = handleSubmit(async (values) => {
     setIsEditingEmail(!isEditingEmail);
     await update({ email: values.email });
 
@@ -27,7 +25,7 @@ const Profile = (data) => {
     }
   });
 
-  const save2 = handleSubmit(async (values) => {
+  const savePassword = handleSubmit(async (values) => {
     setIsEditingPassword(!setIsEditingPassword);
     await update({ password: values.password });
   });
@@ -50,18 +48,18 @@ const Profile = (data) => {
                 <span className={s.labelSpan}>Correo:</span>
               </div>
               {isEditingEmail ? (
-                <input type="text" className={s.input} {...register("email")} />
+                <input type="text" {...register("email")} />
               ) : (
                 <span>{user.email}</span>
               )}
               {isEditingEmail ? (
-                <div onClick={save} className={s.listo}>
-                  <Listo style={{ cursor: "pointer" }} />
-                </div>
+                <button onClick={saveCorreo} className={s.listoButton}>
+                  Guardar
+                </button>
               ) : (
-                <div onClick={edited} className={s.editar}>
-                  <Editar />
-                </div>
+                <button onClick={editedCorreo} className={s.editarButton}>
+                  Editar
+                </button>
               )}
             </div>
 
@@ -70,22 +68,18 @@ const Profile = (data) => {
                 <span className={s.labelSpan}>Contraseña:</span>
               </div>
               {isEditingPassword ? (
-                <input
-                  type="text"
-                  className={s.input}
-                  {...register("password")}
-                />
+                <input type="text" {...register("password")} />
               ) : (
                 <span>{"*************"}</span>
               )}
               {isEditingPassword ? (
-                <div onClick={save2} className={s.listo}>
-                  <Listo />
-                </div>
+                <button onClick={savePassword} className={s.listoButton}>
+                  Guardar
+                </button>
               ) : (
-                <div onClick={edited2} className={s.editar}>
-                  <Editar />
-                </div>
+                <button onClick={editedPassword} className={s.editarButton}>
+                  Editar
+                </button>
               )}
             </div>
 
@@ -102,7 +96,7 @@ const Profile = (data) => {
             </div>
             <h4 className={s.level}>NIVEL ACTUAL</h4>
             <div className={s.userLevel}>
-              <div className={s.levelBox}>{level === 4 ? 3 : level}</div>
+              <div className={s.levelBox}>{level}</div>
             </div>
           </div>
         </div>

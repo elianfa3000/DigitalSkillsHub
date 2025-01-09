@@ -5,7 +5,7 @@
   line-height: 1.6;
 }
 .sectionTitle {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   color: #333;
   margin-bottom: 1rem;
   padding-top: 1rem;
@@ -20,7 +20,7 @@
 .descriptionText,
 .tipText,
 .conclusionText {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #555;
   margin-bottom: 1rem;
 }
@@ -40,7 +40,12 @@
   max-width: 100%;
   border-radius: 10px;
 }
-
+.img {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
 .buttonGroup {
   display: flex;
   justify-content: center;

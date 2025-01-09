@@ -27,6 +27,8 @@ export const Context = ({ children }) => {
   const [level, setLevel] = useState(null); /*//////// */
   //
   const signup = async (user) => {
+    // const cookie = cookies.get("token");
+    //console.log(cookie);
     try {
       console.log(user);
       const res = await registerRequest(user);
@@ -37,19 +39,22 @@ export const Context = ({ children }) => {
       setIsAuthenticated(true);
       setLevel(res.data.level);
     } catch (err) {
-      if (err.response && err.response.data) {
-        setErrors([err.response.data.message || "Error desconocido"]);
-      } else {
-        setErrors(["Error al conectar con el servidor"]);
-      }
-      console.error("Error en el registro:", err);
+      console.log(err);
+      setErrors(err.response.data);
     }
   };
 
   //
   const signin = async (user) => {
+    /* console.log("ggggggggggg");
+     */
+    console.log(cookies.get());
+    console.log("cookies.get()");
+    const token = cookies.get("token");
+    console.log("Token desde cookiesss:", token);
     try {
       const res = await signinRequest(user);
+      console.log(res);
       setUser(res.data);
       setIsAuthenticated(true);
       setLevel(res.data.level);
@@ -65,6 +70,8 @@ export const Context = ({ children }) => {
     setUser([]);
   };
   const update = async (user) => {
+    const cookie = cookies.get();
+    console.log(cookie);
     try {
       const newUser = await updateLevel(user);
       console.log(newUser.data);
@@ -80,17 +87,19 @@ export const Context = ({ children }) => {
   useEffect(() => {
     async function checkLogin() {
       const cookie = cookies.get();
+      console.log(cookie);
+      console.log("ggggggggggg");
       try {
-        if (!cookie.token) {
+        /* if (!cookie.token) {
           setIsAuthenticated(false);
           setUser(null);
           setLoading(false);
           return;
-        }
-
+        }*/
         const res = await verifyToken();
+        console.log("res.data");
+        console.log("************//");
         console.log(res.data);
-
         if (!res.data) {
           setIsAuthenticated(false);
           setUser(null);
@@ -101,7 +110,6 @@ export const Context = ({ children }) => {
         setUser(res.data);
         setLoading(false);
         setLevel(res.data.level); //
-
         return;
       } catch (error) {
         setIsAuthenticated(false);

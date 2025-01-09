@@ -19,10 +19,8 @@ const Teams = (data) => {
   const test3 = () => {
     if (level === 3) {
       navigate("/test3");
-    }
-    if (level === 1 || level === 2 || level === 4) {
-      //4
-      navigate("/dashboard");
+    } else {
+      navigate("/classes");
     }
   };
   const navigate = useNavigate();
@@ -125,7 +123,7 @@ const Teams = (data) => {
           <p className={s.tipText}>
             Un canal es como una sala dentro del equipo donde puedes hablar
             sobre un tema específico. Por ejemplo, un equipo de matemáticas
-            podría tener un canal para "Tareas" y otro para "Preguntas".
+            podría tener un canal para {'"Tareas"'} y otro para {'"Preguntas"'}.
           </p>
           <img src={img3} alt="Equipos" className={s.img} />
         </div>
@@ -158,9 +156,7 @@ const Teams = (data) => {
               height="315"
               src="https://www.youtube.com/embed/ZCi7Et-ZR5c?si=5keRGMJdOPZGrKSS"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
           </div>
@@ -194,9 +190,7 @@ const Teams = (data) => {
               height="315"
               src="https://www.youtube.com/embed/TnqsS0I5sjU?si=JKnYOvuDt6oqMYIU"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
           </div>

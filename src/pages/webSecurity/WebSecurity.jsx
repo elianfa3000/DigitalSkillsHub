@@ -11,8 +11,7 @@ const WebSecurity = (data) => {
 
     if (level === 1) {
       navigate("/test1");
-    }
-    if (level === 2 || level === 3) {
+    } else {
       navigate("/useInformation");
     }
   };
@@ -55,7 +54,7 @@ const WebSecurity = (data) => {
             </li>
             <li className={s.tipText}>
               <strong>Evita palabras comunes:</strong> No uses palabras como
-              "contraseña" o "123456". Son fáciles de adivinar.
+              {`"contraseña" o "123456"`}. Son fáciles de adivinar.
             </li>
             <li className={s.tipText}>
               <strong>Evita información personal:</strong> No incluyas tu
@@ -105,8 +104,8 @@ const WebSecurity = (data) => {
           <ul style={{ marginLeft: "20px" }}>
             <li className={s.tipText}>
               <strong>Desconfía de mensajes urgentes:</strong> Correos que piden
-              "actuar ahora" o que te advierten de una "emergencia" suelen ser
-              intentos de phishing.
+              {` "actuar ahora" o que te advierten de una "emergencia"`} suelen
+              ser intentos de phishing.
             </li>
             <li className={s.tipText}>
               <strong>Revisa la dirección del remitente:</strong> Los correos

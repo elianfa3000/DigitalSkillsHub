@@ -13,8 +13,8 @@ function Congratulations() {
         <h1>🎉 🎓 ¡Felicidades, Has Completado Todo el Curso! 🎓 🎉</h1>
         <p className={s.tipText}>
           ¡Increíble! Has finalizado con éxito todas las evaluaciones y
-          completado los tres niveles de aprendizaje. Durante este proceso,
-          adquiriste habilidades esenciales en competencias digitales,
+          completado todos los niveles de aprendizaje. Durante este proceso,
+          mejoraste habilidades esenciales en competencias digitales,
           herramientas tecnológicas y aprendizaje en línea.
         </p>
         <p className={s.tipText}>

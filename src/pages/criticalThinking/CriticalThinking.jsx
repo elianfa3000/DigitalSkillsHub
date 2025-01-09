@@ -11,8 +11,7 @@ const CriticalThinking = (data) => {
 
     if (level === 2) {
       navigate("/test2");
-    }
-    if (level === 1 || level === 3) {
+    } else {
       navigate("/productivityTools");
     }
   };
@@ -42,42 +41,50 @@ const CriticalThinking = (data) => {
             de forma más profunda y a tomar mejores decisiones.
           </p>
           <h3 className={s.subTitle}>Componentes del pensamiento crítico:</h3>
-          <ul style={{ marginLeft: "20px" }}>
-            <li className={s.tipText}>
-              <strong>Curiosidad:</strong> El pensamiento crítico empieza con la
-              curiosidad, que es tener ganas de saber más. Cuando somos
-              curiosos, hacemos preguntas como “¿Por qué sucede esto?” o “¿Qué
-              significa realmente?”. Estas preguntas nos ayudan a explorar y
-              entender mejor un tema.
-              <p className={s.exampleText}>
-                <strong> Ejemplo:</strong>
-                Si lees un artículo sobre una “cura milagrosa” para una
-                enfermedad, en lugar de creerlo de inmediato, podrías preguntar:
-                “¿Cómo funciona esta cura? ¿Hay pruebas científicas?”.
-              </p>
-            </li>
-            <li className={s.tipText}>
-              <strong>Evaluación:</strong> Evaluar es pensar detenidamente en la
-              información y decidir si es confiable. Esto implica analizar la
-              fuente (quién lo dijo o lo escribió) y si la información tiene
-              sentido.
-              <p className={s.exampleText}>
-                <strong> Ejemplo:</strong> Si alguien en redes sociales publica
-                algo impactante sin decir de dónde viene, evalúa si esa persona
-                es experta en el tema o si solo está compartiendo una opinión.
-              </p>
-            </li>
-            <li className={s.tipText}>
-              <strong>Razonamiento:</strong> Usar el razonamiento significa
-              pensar de manera lógica. No solo se trata de creer algo, sino de
-              ver si la información tiene sentido y está respaldada por hechos o
-              evidencia.
-              <p className={s.exampleText}>
-                <strong> Ejemplo:</strong> Si ves en una página que dice que
-                tomar un solo tipo de alimento te hará perder peso, razona si
-                esto es lógico o si la pérdida de peso es más compleja.
-              </p>
-            </li>
+          <ul>
+            <div className={s.toolsG}>
+              <li className={s.tipText}>
+                <strong>Curiosidad:</strong> El pensamiento crítico empieza con
+                la curiosidad, que es tener ganas de saber más. Cuando somos
+                curiosos, hacemos preguntas como “¿Por qué sucede esto?” o “¿Qué
+                significa realmente?”. Estas preguntas nos ayudan a explorar y
+                entender mejor un tema.
+                <p className={s.exampleText}>
+                  <strong> -Ejemplo:</strong>
+                  Si lees un artículo sobre una “cura milagrosa” para una
+                  enfermedad, en lugar de creerlo de inmediato, podrías
+                  preguntar: “¿Cómo funciona esta cura? ¿Hay pruebas
+                  científicas?”.
+                </p>
+              </li>
+            </div>
+            <div className={s.toolsG}>
+              <li className={s.tipText}>
+                <strong>Evaluación:</strong> Evaluar es pensar detenidamente en
+                la información y decidir si es confiable. Esto implica analizar
+                la fuente (quién lo dijo o lo escribió) y si la información
+                tiene sentido.
+                <p className={s.exampleText}>
+                  <strong> -Ejemplo:</strong> Si alguien en redes sociales
+                  publica algo impactante sin decir de dónde viene, evalúa si
+                  esa persona es experta en el tema o si solo está compartiendo
+                  una opinión.
+                </p>
+              </li>
+            </div>
+            <div className={s.toolsG}>
+              <li className={s.tipText}>
+                <strong>Razonamiento:</strong> Usar el razonamiento significa
+                pensar de manera lógica. No solo se trata de creer algo, sino de
+                ver si la información tiene sentido y está respaldada por hechos
+                o evidencia.
+                <p className={s.exampleText}>
+                  <strong> -Ejemplo:</strong> Si ves en una página que dice que
+                  tomar un solo tipo de alimento te hará perder peso, razona si
+                  esto es lógico o si la pérdida de peso es más compleja.
+                </p>
+              </li>
+            </div>
           </ul>
 
           <div className={s.videoContainer}>
@@ -105,52 +112,57 @@ const CriticalThinking = (data) => {
           <h3 className={s.subTitle}>
             Técnicas clave para desarrollar el pensamiento crítico:
           </h3>
-          <ul style={{ marginLeft: "20px" }}>
-            <li className={s.tipText}>
-              <strong> Pregunta la fuente de la información:</strong>
-              Preguntarte “¿Quién dijo esto?” es clave para saber si la
-              información es confiable. La fuente puede ser una persona, un
-              sitio web, un artículo o una publicación en redes sociales.
-              Averigua si esa fuente es confiable y si tiene conocimientos en el
-              tema.
-              <div className={s.exampleText}>
-                <strong> Ejemplo:</strong> Si lees una noticia en un blog
+          <ul>
+            <div className={s.toolsG}>
+              <li className={s.tipText}>
+                <strong> Pregunta la fuente de la información:</strong>
+                Preguntarte “¿Quién dijo esto?” es clave para saber si la
+                información es confiable. La fuente puede ser una persona, un
+                sitio web, un artículo o una publicación en redes sociales.
+                Averigua si esa fuente es confiable y si tiene conocimientos en
+                el tema. <br />
+                <strong> -Ejemplo:</strong> Si lees una noticia en un blog
                 desconocido, podrías investigar quién la escribió. Si la persona
                 no es experta o el sitio web tiene poca reputación, puede que la
                 información no sea confiable.
-              </div>
-            </li>
-            <li className={s.tipText}>
-              <strong>
-                Identifica posibles sesgos o puntos de vista parciales:
-              </strong>
-              Un sesgo es cuando una persona o fuente muestra solo una parte de
-              la historia, sin ser completamente neutral. Todas las personas
-              tenemos opiniones, pero cuando analizas información, es importante
-              detectar si está influenciada por el punto de vista de quien la
-              escribe.
-              <div className={s.exampleText}>
-                <strong> Ejemplo:</strong> Imagina que lees un artículo sobre
-                una empresa escrito por un empleado de esa empresa. Es posible
-                que el artículo muestre solo los aspectos positivos y oculte
-                cualquier problema. Identificar el sesgo te ayuda a ver más allá
-                de lo que se muestra.
-              </div>
-            </li>
-            <li className={s.tipText}>
-              <strong>
-                Busca otras fuentes para confirmar la información:
-              </strong>
-              Antes de aceptar una información, intenta buscar otras fuentes que
-              hablen sobre el mismo tema. Si varias fuentes confiables confirman
-              lo mismo, es probable que la información sea verdadera.{" "}
-              <div className={s.exampleText}>
-                <strong> Ejemplo:</strong> Si escuchas una noticia sobre un
-                nuevo descubrimiento científico, búscala en otros sitios de
-                noticias científicas. Si varios sitios importantes dicen lo
-                mismo, la información tiene más posibilidades de ser cierta.
-              </div>
-            </li>
+              </li>
+            </div>
+            <div className={s.toolsG}>
+              <li className={s.tipText}>
+                <strong>
+                  Identifica posibles sesgos o puntos de vista parciales:
+                </strong>
+                Un sesgo es cuando una persona o fuente muestra solo una parte
+                de la historia, sin ser completamente neutral. Todas las
+                personas tenemos opiniones, pero cuando analizas información, es
+                importante detectar si está influenciada por el punto de vista
+                de quien la escribe.
+                <div className={s.exampleText}>
+                  <strong> Ejemplo:</strong> Imagina que lees un artículo sobre
+                  una empresa escrito por un empleado de esa empresa. Es posible
+                  que el artículo muestre solo los aspectos positivos y oculte
+                  cualquier problema. Identificar el sesgo te ayuda a ver más
+                  allá de lo que se muestra.
+                </div>
+              </li>
+            </div>
+            <div className={s.toolsG}>
+              <li className={s.tipText}>
+                <strong>
+                  Busca otras fuentes para confirmar la información:
+                </strong>
+                Antes de aceptar una información, intenta buscar otras fuentes
+                que hablen sobre el mismo tema. Si varias fuentes confiables
+                confirman lo mismo, es probable que la información sea
+                verdadera.{" "}
+                <div className={s.exampleText}>
+                  <strong> Ejemplo:</strong> Si escuchas una noticia sobre un
+                  nuevo descubrimiento científico, búscala en otros sitios de
+                  noticias científicas. Si varios sitios importantes dicen lo
+                  mismo, la información tiene más posibilidades de ser cierta.
+                </div>
+              </li>
+            </div>
           </ul>
         </div>
         <h2 className={s.sectionTitle}>Practica lo aprendido</h2>

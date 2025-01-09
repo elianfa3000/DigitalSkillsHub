@@ -129,7 +129,7 @@ const Navigation = (data) => {
             ¿Cuáles son las principales estafas en línea y cómo evitarlas?
           </a>
         </div>
-
+        <br />
         <div className={s.safetyTips}>
           <h2 className={s.sectionTitle}>Conclusión</h2>
           <p className={s.conclusionText}>

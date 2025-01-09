@@ -23,6 +23,7 @@
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
+  font-size: 1.1rem;
 }
 
 .labelContainer {
@@ -32,39 +33,62 @@
 }
 
 .labelSpan {
-  margin-right: 10px;
   font-weight: 500;
   color: #838383;
 }
 
+.listoButton,
+.editarButton {
+  width: 100px;
+  padding: 10px 20px;
+  margin-top: 9px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.listoButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+.listoButton:hover {
+  background-color: #45a049;
+}
+
+.editarButton {
+  background-color: #008cba;
+  color: white;
+}
+
+.editarButton:hover {
+  background-color: #007b9e;
+}
+
+.labelSpan {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.level {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+}
 .errors {
   color: red;
 }
-.listo {
+.levelSubtitle {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.4;
   margin-top: 20px;
-  padding: 10px;
-
-  background-color: #4caf50;
-  width: 46px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-.editar {
-  margin-top: 20px;
-  padding: 10px;
-
-  background-color: #656ac2;
-  width: 46px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: transform 0.1s;
-}
-.listo:active {
-  transform: scale(0.8);
-}
-.editar:active {
-  transform: scale(0.8);
+  margin-bottom: 20px;
 }
 .userLevel {
   display: flex;
@@ -81,21 +105,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  font-size: 24px;
+  font-size: 1.1rem;
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-.level {
-  display: block;
-  margin-top: 30px;
-  text-align: center;
-}
-.levelSubtitle {
-  text-align: center;
-  font-style: italic;
-  color: #666;
-  font-size: 12px;
-  line-height: 1.4;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }

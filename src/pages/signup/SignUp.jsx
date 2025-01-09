@@ -18,7 +18,7 @@ const SingUp = (data) => {
       await signup(value);
       alert("✅ Registro exitoso");
     } catch (error) {
-      console.error("Error al registrar:", error);
+      //console.error("Error al registrar:", error);
 
       alert("❌ No se pudo completar el registro.");
     }

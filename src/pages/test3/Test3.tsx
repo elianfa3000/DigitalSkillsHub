@@ -119,10 +119,9 @@ const Test3: React.FC = (data) => {
 
         if (level == 3) {
             await updateLevel({ level: 4 });
-
-            navigation("/congratulations")
+            navigation("/classes")
             window.location.reload();
-        }
+        } else { navigation("/classes") }
     };
 
 
@@ -131,7 +130,7 @@ const Test3: React.FC = (data) => {
             <Navbar outside={data} />
             <div className={styles.Container}>
                 <div className={styles.container}>
-                    <h2 className={styles.sectionTitle}>Evaluacíon 3</h2>
+                    <h2 className={styles.sectionTitle}>Evaluación 3</h2>
                     <h3 className={styles.subTitle}>
                         ¡Bienvenido a tu tercera evaluación! Esta prueba evaluará tu conocimiento sobre herramientas digitales esenciales como Google Drive, Google Docs y Microsoft Teams.
 

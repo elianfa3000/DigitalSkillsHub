@@ -1,7 +1,9 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "digitalskills-backend.onrender.com", //http://localhost:3000https://digitalskills-backend.onrender.com
+  /*"http://localhost:3000",*/
+  baseURL: "https://digitalskillsbackend-production.up.railway.app",
+
   withCredentials: true,
 });
 

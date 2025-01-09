@@ -55,9 +55,7 @@ const ProductivityTools = (data) => {
               height="315"
               src="https://www.youtube.com/embed/G1qMhesHagk?si=hJIyscwPdFOFRBZ9"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
           </div>
@@ -72,9 +70,7 @@ const ProductivityTools = (data) => {
               height="315"
               src="https://www.youtube.com/embed/Jvb9GmCns6s?si=Qm3C0zOPi8TL_6Rh"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
           </div>
@@ -91,7 +87,7 @@ const ProductivityTools = (data) => {
             asignatura o proyecto y asignarle colores, tal como se muestra a
             continuación.
           </p>
-          <img src={img} alt="Carpeas ordenadas" className={s.videoEmbed} />
+          <img src={img} alt="Carpeas ordenadas" className={s.img} />
         </div>
 
         <h2 className={s.sectionTitle}>
@@ -109,9 +105,7 @@ const ProductivityTools = (data) => {
             height="315"
             src="https://www.youtube.com/embed/DleqnGi--Gk?si=3Rf5DpkWFLfj-uXE"
             title="YouTube video player"
-            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
         </div>

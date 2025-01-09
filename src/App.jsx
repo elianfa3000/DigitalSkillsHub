@@ -24,6 +24,20 @@ import Test3 from "./pages/test3/Test3.tsx";
 import Teams from "./pages/teams/Teams.jsx";
 import Congratulations from "./pages/congratulations/Congratulations.jsx";
 import StudyTechniques from "./pages/studyTechniques/StudyTechniques.jsx";
+import Mathematics from "./pages/mathematics/Mathematics.jsx";
+import Language from "./pages/language/Language.jsx";
+import Sciences from "./pages/sciences/Sciences.jsx";
+import SocialStudies from "./pages/socialStudies/SocialStudies.jsx";
+import IntroMathematics from "./pages/mathematics/IntroMathematics.jsx";
+import IntroSciences from "./pages/sciences/IntroSciences.jsx";
+import IntroLanguage from "./pages/language/IntroLanguage.jsx";
+import IntroSocialStudies from "./pages/socialStudies/IntroSocialStudies.jsx";
+import IntroInfo from "./pages/intro/IntroInfo.jsx";
+import TestMate from "./pages/testMate/TestMate.tsx";
+import TestSciences from "./pages/testSciences/TestSciences.tsx";
+import TestLanguage from "./pages/testLanguage/TestLanguage.tsx";
+import TestStudies from "./pages/testStudies/TestStudies.tsx";
+import IntroClasses from "./pages/classesPage/IntroClasses.jsx";
 function App() {
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -37,12 +51,28 @@ function App() {
 
   return (
     <Context>
-      <BrowserRouter basename="/DigitalSkillsHub">
+      <BrowserRouter /*basename="/DigitalSkillsHub"*/>
         <ScrollToTop />
         <Routes>
           <Route path="" element={<Homepage outside={true} />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
+
+          <Route path="/introOne" element={<IntroInfo />} />
+          <Route path="/introMat" element={<IntroMathematics />} />
+          <Route path="/introSciences" element={<IntroSciences />} />
+          <Route path="/introLanguage" element={<IntroLanguage />} />
+          <Route path="/introSocial" element={<IntroSocialStudies />} />
+          <Route path="/testMate" element={<TestMate />} />
+          <Route path="/testSciences" element={<TestSciences />} />
+          <Route path="/testLanguage" element={<TestLanguage />} />
+          <Route path="/testStudies" element={<TestStudies />} />
+          <Route path="/introClasses" element={<IntroClasses />} />
+
+          <Route path="/mat" element={<Mathematics />} />
+          <Route path="/language" element={<Language />} />
+          <Route path="/sciences" element={<Sciences />} />
+          <Route path="/socialS" element={<SocialStudies />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/dashboard" element={<Dashboard outside={true} />} />
             <Route path="/classes" element={<ClassesPage outside={true} />} />
