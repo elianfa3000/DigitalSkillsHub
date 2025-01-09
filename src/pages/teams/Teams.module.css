@@ -5,7 +5,7 @@
   line-height: 1.6;
 }
 .sectionTitle {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   color: #333;
   margin-bottom: 1rem;
   padding-top: 1rem;
@@ -14,7 +14,7 @@
 .descriptionText,
 .tipText,
 .conclusionText {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #555;
   margin-bottom: 1rem;
 }
@@ -56,14 +56,13 @@
 }
 .icon {
   display: flex;
-
   margin: auto;
 }
 .img {
   display: flex;
   margin: auto;
   width: 100%;
-  max-width: 1000px;
+  max-width: 700px;
 }
 .videoEmbed {
   max-width: 100%;

@@ -6,20 +6,20 @@ const Navbar = (data) => {
   const verify = data.outside;
 
   const { isAuthenticated, logout } = useAuth();
-  const logOut = () => {
-    logout();
+  const logOut = async () => {
+    await logout();
   };
 
   return (
     <div className={s.nav}>
-      <ul className={s.navUl}>
+      <div className={s.navUl}>
         <NavLink
           className={s.navLink}
           to={isAuthenticated ? "/dashboard" : "/"}
         >
-          <li style={{ cursor: "pointer" }}>INICIO</li>
+          <div style={{ cursor: "pointer" }}>INICIO</div>
         </NavLink>
-      </ul>
+      </div>
       {!verify.outside === false && (
         <NavLink
           className={s.nav2}
