@@ -5,12 +5,12 @@ import img2 from "../../public/collaboration.png";
 import img3 from "../../public/study.png";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext.jsx";
-/*import { updateLevel } from "../../api/auth.js";*/
+//import { updateLevel } from "../../api/auth.js";
 const ClassesPage = (data) => {
   const navigation = useNavigate();
   const { level } = useAuth();
-  /*const level2 = async () => {
-    await updateLevel({ level: 1 });
+  /* const level2 = async () => {
+    await updateLevel({ level: 4 });
     //window.location.reload();
   };*/
   return (
@@ -67,7 +67,7 @@ const ClassesPage = (data) => {
       {/*
         <div>
           <button onClick={level2}>
-            <h3>level 2</h3>
+            <h3>.</h3>
           </button>
         </div>
       */}

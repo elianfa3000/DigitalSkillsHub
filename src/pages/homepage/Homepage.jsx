@@ -22,9 +22,9 @@ const Homepage = (data) => {
             aprendizaje en línea que necesitas para mejorar en la era digital
           </p>
           <p className={s.oneDescription}>
-            Dominarás las competencias digitales esenciales y a mejorar tus
-            habilidades de aprendizaje en línea para alcanzar el éxito en la era
-            digital. Nuestra plataforma te ofrece una experiencia de aprendizaje
+            Mejora tus competencias digitales esenciales y tus habilidades de
+            aprendizaje en línea para alcanzar el éxito en la era digital.
+            Nuestra plataforma te ofrece una experiencia de aprendizaje
             interactiva y de alta calidad. Aprende a tu propio ritmo y recibe
             evaluaciones que te ayudarán a medir tu progreso
           </p>
